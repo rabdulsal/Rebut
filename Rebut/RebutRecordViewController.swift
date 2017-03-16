@@ -9,6 +9,8 @@
 import UIKit
 
 class RebutRecordViewController: UIViewController {
+    
+    /* --- Controller for managing recording Rebuts --- */
 
     override func viewDidLoad() {
         super.viewDidLoad()

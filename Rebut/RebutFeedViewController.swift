@@ -9,6 +9,8 @@
 import UIKit
 
 class RebutFeedViewController: UIViewController {
+    
+    /* --- Controller for viewing all Rebuts in your Feed --- */
 
     override func viewDidLoad() {
         super.viewDidLoad()

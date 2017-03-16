@@ -15,6 +15,13 @@
 		4CBC60641E7A2D42005C26D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC60621E7A2D42005C26D4 /* LaunchScreen.storyboard */; };
 		4CBC606F1E7A2D42005C26D4 /* RebutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC606E1E7A2D42005C26D4 /* RebutTests.swift */; };
 		4CBC607A1E7A2D42005C26D4 /* RebutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60791E7A2D42005C26D4 /* RebutUITests.swift */; };
+		4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60881E7A4188005C26D4 /* Rebut.swift */; };
+		4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC608A1E7A42C3005C26D4 /* Post.swift */; };
+		4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC608C1E7A43DB005C26D4 /* Response.swift */; };
+		4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC608E1E7A4D5C005C26D4 /* Comment.swift */; };
+		4CBC60911E7A6114005C26D4 /* Karma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60901E7A6114005C26D4 /* Karma.swift */; };
+		4CBC60931E7A645A005C26D4 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60921E7A645A005C26D4 /* Vote.swift */; };
+		4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60941E7A6B02005C26D4 /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		4CBC60751E7A2D42005C26D4 /* RebutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RebutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60791E7A2D42005C26D4 /* RebutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutUITests.swift; sourceTree = "<group>"; };
 		4CBC607B1E7A2D42005C26D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBC60881E7A4188005C26D4 /* Rebut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebut.swift; sourceTree = "<group>"; };
+		4CBC608A1E7A42C3005C26D4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4CBC608C1E7A43DB005C26D4 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		4CBC608E1E7A4D5C005C26D4 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		4CBC60901E7A6114005C26D4 /* Karma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Karma.swift; sourceTree = "<group>"; };
+		4CBC60921E7A645A005C26D4 /* Vote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
+		4CBC60941E7A6B02005C26D4 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		4CBC60561E7A2D41005C26D4 /* Rebut */ = {
 			isa = PBXGroup;
 			children = (
+				4CBC60871E7A40C0005C26D4 /* Classes */,
 				4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */,
 				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
 				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
@@ -126,6 +141,20 @@
 				4CBC607B1E7A2D42005C26D4 /* Info.plist */,
 			);
 			path = RebutUITests;
+			sourceTree = "<group>";
+		};
+		4CBC60871E7A40C0005C26D4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC60881E7A4188005C26D4 /* Rebut.swift */,
+				4CBC608A1E7A42C3005C26D4 /* Post.swift */,
+				4CBC608C1E7A43DB005C26D4 /* Response.swift */,
+				4CBC608E1E7A4D5C005C26D4 /* Comment.swift */,
+				4CBC60901E7A6114005C26D4 /* Karma.swift */,
+				4CBC60921E7A645A005C26D4 /* Vote.swift */,
+				4CBC60941E7A6B02005C26D4 /* Audio.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
+				4CBC60911E7A6114005C26D4 /* Karma.swift in Sources */,
 				4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */,
+				4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */,
+				4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */,
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
+				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
+				4CBC60931E7A645A005C26D4 /* Vote.swift in Sources */,
+				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
