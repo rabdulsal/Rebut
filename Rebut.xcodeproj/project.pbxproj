@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19064F1E7B225C003DDCC5 /* Rebutter.swift */; };
+		4C1906521E7B241B003DDCC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906511E7B241B003DDCC5 /* User.swift */; };
+		4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906531E7B246E003DDCC5 /* Commenter.swift */; };
+		4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906551E7B3E4E003DDCC5 /* Source.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
 		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C19064F1E7B225C003DDCC5 /* Rebutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebutter.swift; sourceTree = "<group>"; };
+		4C1906511E7B241B003DDCC5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4C1906531E7B246E003DDCC5 /* Commenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commenter.swift; sourceTree = "<group>"; };
+		4C1906551E7B3E4E003DDCC5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
@@ -113,8 +121,8 @@
 		4CBC60561E7A2D41005C26D4 /* Rebut */ = {
 			isa = PBXGroup;
 			children = (
-				4CBC60871E7A40C0005C26D4 /* Classes */,
 				4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */,
+				4CBC60871E7A40C0005C26D4 /* Classes */,
 				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
 				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
 				4CBC605D1E7A2D42005C26D4 /* Main.storyboard */,
@@ -153,6 +161,10 @@
 				4CBC60901E7A6114005C26D4 /* Karma.swift */,
 				4CBC60921E7A645A005C26D4 /* Vote.swift */,
 				4CBC60941E7A6B02005C26D4 /* Audio.swift */,
+				4C19064F1E7B225C003DDCC5 /* Rebutter.swift */,
+				4C1906511E7B241B003DDCC5 /* User.swift */,
+				4C1906531E7B246E003DDCC5 /* Commenter.swift */,
+				4C1906551E7B3E4E003DDCC5 /* Source.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -295,12 +307,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
+				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4CBC60911E7A6114005C26D4 /* Karma.swift in Sources */,
 				4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */,
+				4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */,
 				4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */,
 				4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */,
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
+				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
+				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CBC60931E7A645A005C26D4 /* Vote.swift in Sources */,
 				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
@@ -552,6 +568,7 @@
 				4CBC60801E7A2D42005C26D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CBC60811E7A2D42005C26D4 /* Build configuration list for PBXNativeTarget "RebutTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +577,7 @@
 				4CBC60831E7A2D42005C26D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CBC60841E7A2D42005C26D4 /* Build configuration list for PBXNativeTarget "RebutUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +586,7 @@
 				4CBC60861E7A2D42005C26D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

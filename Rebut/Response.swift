@@ -10,5 +10,17 @@ import Foundation
 
 class Response: Rebut {
     
-    // Represents a child-level Rebut that is in response to a Post. Can have optional Links
+    // Represents a child-level Rebut that is in response to a Post. 
+    
+    /* 
+     * Required:
+     * - Recipient
+    */
+    
+    /*
+     * Optional:
+     * - Sources
+     * - Responses
+     * - Comments
+    */
 }

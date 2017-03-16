@@ -11,4 +11,13 @@ import Foundation
 class Karma {
     
     // Represents primary currency in the app that increments following specific activities
+    
+    /*
+     * Required:
+     * - User
+     */
+    
+    /*
+     * Optional: ?
+     */
 }

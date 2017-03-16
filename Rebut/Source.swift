@@ -1,5 +1,5 @@
 //
-//  Vote.swift
+//  Source.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/16/17.
@@ -8,16 +8,14 @@
 
 import Foundation
 
-class Vote {
+class Source {
     
-    // Primary object representing a Vote on a Rebut
+    // Represents a piece of content a User can attach to their Rebut for reference purposes
     
     /*
      * Required:
      * - Rebut
-     */
-    
-    /*
-     * Optional: ?
+     * - Title
+     * - Hyperlink
      */
 }

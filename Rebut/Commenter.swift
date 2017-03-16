@@ -1,5 +1,5 @@
 //
-//  Vote.swift
+//  Commenter.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/16/17.
@@ -8,16 +8,13 @@
 
 import Foundation
 
-class Vote {
+class Commenter : User {
     
-    // Primary object representing a Vote on a Rebut
+    // Represents a User who is replying to a Rebut via Comment
     
     /*
      * Required:
-     * - Rebut
-     */
-    
-    /*
-     * Optional: ?
+     * - Recipient
+     * - Text
      */
 }

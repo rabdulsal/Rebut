@@ -11,4 +11,16 @@ import Foundation
 class Rebut {
     
     // Represents a base content object consisting of Audio
+    
+    /*
+     * Required:
+     * - Audio
+     */
+    
+    /*
+     * Optional:
+     * - Sources
+     * - Responses
+     * - Comments
+     */
 }

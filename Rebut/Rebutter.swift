@@ -1,5 +1,5 @@
 //
-//  Vote.swift
+//  Rebutter.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/16/17.
@@ -8,16 +8,13 @@
 
 import Foundation
 
-class Vote {
+class Rebutter : User {
     
-    // Primary object representing a Vote on a Rebut
+    // Represents a User that is replying to a Post via Response
     
     /*
      * Required:
-     * - Rebut
-     */
-    
-    /*
-     * Optional: ?
+     * - Recipient
+     * - Audio
      */
 }

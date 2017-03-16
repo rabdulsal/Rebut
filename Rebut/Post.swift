@@ -11,4 +11,17 @@ import Foundation
 class Post : Rebut {
     
     // Represents a top-level Rebut that includes a required title, and optional Links
+    
+    /*
+     * Required:
+     * - Audio
+     * - Title
+     */
+    
+    /*
+     * Optional:
+     * - Sources
+     * - Responses
+     * - Comments
+     */
 }

@@ -10,5 +10,18 @@ import Foundation
 
 class Comment {
     
-    // Represents a text-based comment to a Rebut
+    // Represents a text-based reply to a Rebut consisting of a User recipient and text comment
+    
+    /*
+     * Required:
+     * - Commenter
+     * - Recipient
+     */
+    
+    /*
+     * Optional:
+     * - Sources
+     * - Responses
+     * - Comments
+     */
 }
