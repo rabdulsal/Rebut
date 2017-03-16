@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/15/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class RebutRecordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

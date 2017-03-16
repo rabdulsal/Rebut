@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/15/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class RebutFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
