@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Rebutter : User {
+class Rebutter : User { // Not needed?
     
     // Represents a User that is replying to a Post via Response
     

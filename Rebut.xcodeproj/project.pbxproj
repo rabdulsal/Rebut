@@ -121,10 +121,11 @@
 		4CBC60561E7A2D41005C26D4 /* Rebut */ = {
 			isa = PBXGroup;
 			children = (
+				4CBC60981E7B687A005C26D4 /* Record */,
+				4CBC60971E7B6823005C26D4 /* Feed */,
+				4CBC60961E7B6801005C26D4 /* Account */,
 				4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */,
 				4CBC60871E7A40C0005C26D4 /* Classes */,
-				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
-				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
 				4CBC605D1E7A2D42005C26D4 /* Main.storyboard */,
 				4CBC60601E7A2D42005C26D4 /* Assets.xcassets */,
 				4CBC60621E7A2D42005C26D4 /* LaunchScreen.storyboard */,
@@ -154,19 +155,42 @@
 		4CBC60871E7A40C0005C26D4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		4CBC60961E7B6801005C26D4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC60901E7A6114005C26D4 /* Karma.swift */,
+				4CBC60921E7A645A005C26D4 /* Vote.swift */,
+				4C1906511E7B241B003DDCC5 /* User.swift */,
+				4C19064F1E7B225C003DDCC5 /* Rebutter.swift */,
+				4C1906531E7B246E003DDCC5 /* Commenter.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		4CBC60971E7B6823005C26D4 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		4CBC60981E7B687A005C26D4 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
+				4CBC60941E7A6B02005C26D4 /* Audio.swift */,
+				4C1906551E7B3E4E003DDCC5 /* Source.swift */,
 				4CBC60881E7A4188005C26D4 /* Rebut.swift */,
 				4CBC608A1E7A42C3005C26D4 /* Post.swift */,
 				4CBC608C1E7A43DB005C26D4 /* Response.swift */,
 				4CBC608E1E7A4D5C005C26D4 /* Comment.swift */,
-				4CBC60901E7A6114005C26D4 /* Karma.swift */,
-				4CBC60921E7A645A005C26D4 /* Vote.swift */,
-				4CBC60941E7A6B02005C26D4 /* Audio.swift */,
-				4C19064F1E7B225C003DDCC5 /* Rebutter.swift */,
-				4C1906511E7B241B003DDCC5 /* User.swift */,
-				4C1906531E7B246E003DDCC5 /* Commenter.swift */,
-				4C1906551E7B3E4E003DDCC5 /* Source.swift */,
 			);
-			name = Classes;
+			name = Record;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

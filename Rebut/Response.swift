@@ -14,7 +14,9 @@ class Response: Rebut {
     
     /* 
      * Required:
+     * - Rebutter
      * - Recipient
+     * - Rebut
     */
     
     /*

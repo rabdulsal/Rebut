@@ -10,7 +10,7 @@ import Foundation
 
 class Post : Rebut {
     
-    // Represents a top-level Rebut that includes a required title, and optional Links
+    // Represents a top-level Rebut and primary content
     
     /*
      * Required:

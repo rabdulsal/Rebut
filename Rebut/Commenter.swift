@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Commenter : User {
+class Commenter : User { // Not needed?
     
     // Represents a User who is replying to a Rebut via Comment
     
