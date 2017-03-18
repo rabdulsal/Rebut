@@ -26,6 +26,9 @@
 		4CBC60911E7A6114005C26D4 /* Karma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60901E7A6114005C26D4 /* Karma.swift */; };
 		4CBC60931E7A645A005C26D4 /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60921E7A645A005C26D4 /* Vote.swift */; };
 		4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60941E7A6B02005C26D4 /* Audio.swift */; };
+		4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60991E7B8436005C26D4 /* Recording.swift */; };
+		4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */; };
+		4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		4CBC60901E7A6114005C26D4 /* Karma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Karma.swift; sourceTree = "<group>"; };
 		4CBC60921E7A645A005C26D4 /* Vote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
 		4CBC60941E7A6B02005C26D4 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		4CBC60991E7B8436005C26D4 /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutRecordView.swift; sourceTree = "<group>"; };
+		4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordControlsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,9 @@
 				4CBC608A1E7A42C3005C26D4 /* Post.swift */,
 				4CBC608C1E7A43DB005C26D4 /* Response.swift */,
 				4CBC608E1E7A4D5C005C26D4 /* Comment.swift */,
+				4CBC60991E7B8436005C26D4 /* Recording.swift */,
+				4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */,
+				4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -330,10 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */,
 				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4CBC60911E7A6114005C26D4 /* Karma.swift in Sources */,
+				4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */,
 				4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */,
 				4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */,
 				4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */,
@@ -341,6 +352,7 @@
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
+				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CBC60931E7A645A005C26D4 /* Vote.swift in Sources */,
 				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
@@ -495,6 +507,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XYNM954255;
 				INFOPLIST_FILE = Rebut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rashad.Rebut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -508,6 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XYNM954255;
 				INFOPLIST_FILE = Rebut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rashad.Rebut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
