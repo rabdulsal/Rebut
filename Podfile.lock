@@ -1,0 +1,15 @@
+PODS:
+  - IQAudioRecorderController (1.2.0):
+    - SCSiriWaveformView
+  - SCSiriWaveformView (1.0.3)
+
+DEPENDENCIES:
+  - IQAudioRecorderController
+
+SPEC CHECKSUMS:
+  IQAudioRecorderController: 1d46d99330cb2c9381568665d123cf435460a43e
+  SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
+
+PODFILE CHECKSUM: 532d74c1586c1e4a545cfcdc9cb8c1b727433220
+
+COCOAPODS: 1.1.1
