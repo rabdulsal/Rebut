@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Comment {
+struct Comment {
     
     // Represents a text-based reply to a Rebut consisting of a User recipient and text comment
     
@@ -18,11 +18,15 @@ class Comment {
      * - Recipient
      * - Rebut
      */
+    private (set) var comment: String
+    private (set) var commenter: User
+    private (set) var recipient: User
+    private (set) var parentRebut: Rebut
     
-    /*
-     * Optional:
-     * - Sources
-     * - Responses
-     * - Comments
-     */
+    init(comment: String, commenter: User, recipient: User, rebut: Rebut) {
+        self.comment = comment
+        self.commenter = commenter
+        self.recipient = recipient
+        self.parentRebut = rebut
+    }
 }

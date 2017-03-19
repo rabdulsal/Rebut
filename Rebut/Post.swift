@@ -17,11 +17,10 @@ class Post : Rebut {
      * - Audio
      * - Title
      */
+    var title: String
     
-    /*
-     * Optional:
-     * - Sources
-     * - Responses
-     * - Comments
-     */
+    init(title: String, recording: Recording) {
+        self.title = title
+        super.init(recording: recording)
+    }
 }

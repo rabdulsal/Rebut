@@ -11,4 +11,11 @@ import Foundation
 class User {
     
     // Represents a base User object
+    
+    private (set) var name: String
+    private (set) var karma: Karma = Karma()
+    
+    init(name: String) {
+        self.name = name
+    }
 }

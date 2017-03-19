@@ -12,15 +12,27 @@ class Rebut {
     
     // Represents a base content object consisting of Audio
     
-    /*
-     * Required:
-     * - Audio
-     */
+    private (set) var recording: Recording
+    private (set) var responses = [Response]()
+    private (set) var comments = [Comment]()
+    private (set) var sources = [Source]()
+    private (set) var likes = Like()
     
-    /*
-     * Optional:
-     * - Sources
-     * - Responses
-     * - Comments
-     */
+    init(recording: Recording) {
+        self.recording = recording
+    }
+    
+    func addComment(comment: Comment) {
+        comments.append(comment)
+    }
+    
+    func addResponse(response: Response) {
+        responses.append(response)
+    }
+    
+    func addSources(sources: [Source]) {
+        for source in sources {
+            self.sources.append(source)
+        }
+    }
 }

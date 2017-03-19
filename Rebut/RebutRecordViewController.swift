@@ -69,14 +69,12 @@ class RebutRecordViewController: UIViewController , RecorderDelegate {
     }
     
     @IBAction func stop() {
-        
-        delegate?.didFinishRecording(recording)
         dismiss(animated: true, completion: nil)
         
         recordDuration = 0
         recording.stop()
         voiceRecordHUD.update(0.0)
-        
+        delegate?.didFinishRecording(recording)
     }
     
     func audioMeterDidUpdate(_ db: Float) {

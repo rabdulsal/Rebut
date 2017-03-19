@@ -19,10 +19,14 @@ class Response: Rebut {
      * - Rebut
     */
     
-    /*
-     * Optional:
-     * - Sources
-     * - Responses
-     * - Comments
-    */
+    var rebutter: User
+    var recipient: User
+    var parentRebut: Rebut
+    
+    init(rebutter: User, recipient: User, rebut: Rebut, recording: Recording) {
+        self.rebutter = rebutter
+        self.recipient = recipient
+        self.parentRebut = rebut
+        super.init(recording: recording)
+    }
 }

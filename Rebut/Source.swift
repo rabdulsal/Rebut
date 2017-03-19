@@ -18,4 +18,11 @@ class Source {
      * - Title
      * - Hyperlink
      */
+    private (set) var title: String
+    private (set) var link: String
+
+    init(title: String, link: String) {
+        self.title = title
+        self.link = link
+    }
 }
