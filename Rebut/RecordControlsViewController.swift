@@ -14,7 +14,7 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var recordingsTableView: UITableView!
-    var latestRecording: Recording?
+    
     var allRecordings = [Recording]()
     var recorderView: RebutRecordViewController!
     
@@ -51,10 +51,7 @@ class RecordControlsViewController : UIViewController {
 
 extension RecordControlsViewController : RecorderViewDelegate {
     internal func didFinishRecording(_ recording: Recording) {
-        latestRecording = recording
-        if let recording = latestRecording {
-            allRecordings.insert(recording, at: 0)
-        }
+        allRecordings.insert(recording, at: 0)
         print(recording.url)
         recordingsTableView.reloadData()
     }
@@ -65,7 +62,12 @@ extension RecordControlsViewController : RecorderViewDelegate {
 extension RecordControlsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Play Recording
+        let recording = allRecordings[indexPath.row]
+        do {
+            try recording.play()
+        } catch {
+            print(error)
+        }
     }
 }
 
@@ -74,9 +76,8 @@ extension RecordControlsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordControlsIdentifier", for: indexPath) as! RecordingTableViewCell
 
-        if let latest = latestRecording {
-            cell.title.text = "\(latest.url)"
-        }
+        let recording = allRecordings[indexPath.row]
+        cell.title.text = "\(recording.url)"
         
         return cell
     }
