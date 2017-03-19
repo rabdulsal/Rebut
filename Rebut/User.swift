@@ -15,7 +15,8 @@ class User {
     private (set) var name: String
     private (set) var karma: Karma = Karma()
     
-    init(name: String) {
+    init(name: String, karma: Int=0) {
         self.name = name
+        self.karma.update(points: karma)
     }
 }

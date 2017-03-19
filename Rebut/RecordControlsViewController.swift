@@ -15,7 +15,7 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var recordingsTableView: UITableView!
     var latestRecording: Recording?
-    var allRecordings: [Recording]?
+    var allRecordings = [Recording]()
     var recorderView: RebutRecordViewController!
     
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ extension RecordControlsViewController : RecorderViewDelegate {
     internal func didFinishRecording(_ recording: Recording) {
         latestRecording = recording
         if let recording = latestRecording {
-            allRecordings?.insert(recording, at: 0)
+            allRecordings.insert(recording, at: 0)
         }
         print(recording.url)
         recordingsTableView.reloadData()
@@ -72,15 +72,16 @@ extension RecordControlsViewController : UITableViewDelegate {
 extension RecordControlsViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recordControlsIdentifier", for: indexPath) as! RecordingTableViewCell
+
+        if let latest = latestRecording {
+            cell.title.text = "\(latest.url)"
+        }
         
-        let cell = UITableViewCell.init(style: .default, reuseIdentifier: "recordControlsIdentifier")
-        let cellNum = indexPath.row + 1
-        cell.textLabel?.text = "\(cellNum)"
-        
-        return cell // Stub
+        return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allRecordings != nil ? allRecordings!.count : 0
+        return allRecordings.count > 0 ? allRecordings.count : 0
     }
 }

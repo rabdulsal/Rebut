@@ -28,6 +28,7 @@
 		4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */; };
 		4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */; };
 		4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145B1E7E19A300CAFCA1 /* Value.swift */; };
+		4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutRecordView.swift; sourceTree = "<group>"; };
 		4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordControlsViewController.swift; sourceTree = "<group>"; };
 		4CCE145B1E7E19A300CAFCA1 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,18 +187,35 @@
 		4CBC60981E7B687A005C26D4 /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				4CCE145E1E7E4BA300CAFCA1 /* Models */,
+				4CCE145D1E7E4B9100CAFCA1 /* Views */,
 				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
 				4CBC60941E7A6B02005C26D4 /* Audio.swift */,
+				4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */,
+				4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		4CCE145D1E7E4B9100CAFCA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4CCE145E1E7E4BA300CAFCA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				4C1906551E7B3E4E003DDCC5 /* Source.swift */,
 				4CBC60881E7A4188005C26D4 /* Rebut.swift */,
 				4CBC608A1E7A42C3005C26D4 /* Post.swift */,
 				4CBC608C1E7A43DB005C26D4 /* Response.swift */,
 				4CBC608E1E7A4D5C005C26D4 /* Comment.swift */,
 				4CBC60991E7B8436005C26D4 /* Recording.swift */,
-				4CBC609B1E7B84A6005C26D4 /* RebutRecordView.swift */,
-				4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */,
 			);
-			name = Record;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +370,7 @@
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
+				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,
 				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

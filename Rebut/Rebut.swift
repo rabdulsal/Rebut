@@ -18,8 +18,16 @@ class Rebut {
     private (set) var sources = [Source]()
     private (set) var likes = Like()
     
-    init(recording: Recording) {
+    init(
+        recording: Recording,
+        responses: [Response] = [Response](),
+        comments: [Comment] = [Comment](),
+        sources: [Source] = [Source]())
+    {
         self.recording = recording
+        self.responses = responses
+        self.comments = comments
+        self.sources = sources
     }
     
     func addComment(comment: Comment) {
