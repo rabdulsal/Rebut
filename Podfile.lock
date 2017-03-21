@@ -1,15 +1,18 @@
 PODS:
+  - FDWaveformView (2.0.0)
   - IQAudioRecorderController (1.2.0):
     - SCSiriWaveformView
   - SCSiriWaveformView (1.0.3)
 
 DEPENDENCIES:
+  - FDWaveformView
   - IQAudioRecorderController
 
 SPEC CHECKSUMS:
+  FDWaveformView: 13d70f4d8c536393427c8b4c9e846bf0bcfd16c7
   IQAudioRecorderController: 1d46d99330cb2c9381568665d123cf435460a43e
   SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
 
-PODFILE CHECKSUM: 532d74c1586c1e4a545cfcdc9cb8c1b727433220
+PODFILE CHECKSUM: 5fe856014ffdbf3fac260c7e9dc385eb9f0153f0
 
 COCOAPODS: 1.1.1

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,6 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-BG-jPJ" customClass="FDWaveformView" customModule="FDWaveformView">
+                                <rect key="frame" x="16" y="28" width="343" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-Nd-o0i">
+                                <rect key="frame" x="16" y="315" width="43" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start" destination="Ekp-LJ-mfL" eventType="touchUpInside" id="gn5-Qp-vsr"/>
+                                    <action selector="start" destination="9pv-A4-QxB" eventType="touchUpInside" id="poe-4x-Ccn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7I-ms-O9N">
                                 <rect key="frame" x="316" y="315" width="43" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -63,32 +76,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-Nd-o0i">
-                                <rect key="frame" x="16" y="315" width="43" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="start" destination="Ekp-LJ-mfL" eventType="touchUpInside" id="gn5-Qp-vsr"/>
-                                    <action selector="start" destination="9pv-A4-QxB" eventType="touchUpInside" id="poe-4x-Ccn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="YU2-0E-emp" secondAttribute="bottom" id="1i7-tZ-XhK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SPB-BG-jPJ" secondAttribute="trailing" id="9B0-X8-zJQ"/>
+                            <constraint firstItem="ch8-Nd-o0i" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Gb2-24-trg"/>
                             <constraint firstItem="YU2-0E-emp" firstAttribute="top" secondItem="ch8-Nd-o0i" secondAttribute="bottom" constant="31" id="SRm-6S-Mdp"/>
                             <constraint firstItem="YU2-0E-emp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="UJ5-AV-1b9"/>
+                            <constraint firstItem="SPB-BG-jPJ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="VZu-YC-Z5T"/>
+                            <constraint firstItem="ch8-Nd-o0i" firstAttribute="top" secondItem="SPB-BG-jPJ" secondAttribute="bottom" constant="8" id="gJG-uP-VIR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YU2-0E-emp" secondAttribute="trailing" id="hEM-A9-2UM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="YU2-0E-emp" secondAttribute="leading" id="kxf-eR-1jm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ch8-Nd-o0i" secondAttribute="leading" id="qXf-jm-w5i"/>
-                            <constraint firstItem="ch8-Nd-o0i" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="qcn-Jh-LQT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F7I-ms-O9N" secondAttribute="trailing" id="sSc-Rf-qHI"/>
                             <constraint firstItem="F7I-ms-O9N" firstAttribute="width" secondItem="ch8-Nd-o0i" secondAttribute="width" id="yjR-n9-YiR"/>
                             <constraint firstItem="F7I-ms-O9N" firstAttribute="centerY" secondItem="ch8-Nd-o0i" secondAttribute="centerY" id="yvF-bp-tS7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SPB-BG-jPJ" secondAttribute="leading" id="zWA-vI-61k"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="recordingWaveForm" destination="SPB-BG-jPJ" id="LPd-QU-KT3"/>
                         <outlet property="recordingsTableView" destination="YU2-0E-emp" id="XkD-km-QjI"/>
                         <outlet property="startBtn" destination="ch8-Nd-o0i" id="nSc-3Z-ujZ"/>
                         <outlet property="stopBtn" destination="F7I-ms-O9N" id="HDI-K8-9rD"/>
