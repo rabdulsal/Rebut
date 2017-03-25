@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Source {
+class Source : Object {
     
     // Represents a piece of content a User can attach to their Rebut for reference purposes
     
@@ -18,11 +19,11 @@ class Source {
      * - Title
      * - Hyperlink
      */
-    private (set) var title: String
-    private (set) var link: String
+    dynamic var title: String = ""
+    dynamic var link: String = ""
 
-    init(title: String, link: String) {
-        self.title = title
-        self.link = link
-    }
+//    init(title: String, link: String) {
+//        self.title = title
+//        self.link = link
+//    }
 }

@@ -9,7 +9,11 @@
 import Foundation
 
 class Value {
-    private (set) var value: Int = 0
+    private (set) var value: Int
+    
+    init(value: Int = 0) {
+        self.value = value
+    }
     
     func increase() {
         value += 1

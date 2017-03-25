@@ -14,9 +14,11 @@ class User {
     
     private (set) var name: String
     private (set) var karma: Karma = Karma()
+    private (set) var rebuttles: [Rebuttle]
     
-    init(name: String, karma: Int=0) {
+    init(name: String, karma: Int=0, rebuttles: [Rebuttle] = [Rebuttle]()) {
         self.name = name
         self.karma.update(points: karma)
+        self.rebuttles = rebuttles
     }
 }

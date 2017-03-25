@@ -19,14 +19,12 @@ class Response: Rebut {
      * - Rebut
     */
     
-    var rebutter: User
     var recipient: User
     var parentRebut: Rebut
     
     init(rebutter: User, recipient: User, rebut: Rebut, recording: Recording) {
-        self.rebutter = rebutter
         self.recipient = recipient
         self.parentRebut = rebut
-        super.init(recording: recording)
+        super.init(recording: recording, poster: rebutter)
     }
 }

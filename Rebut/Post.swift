@@ -19,8 +19,8 @@ class Post : Rebut {
      */
     var title: String
     
-    init(title: String, recording: Recording) {
+    init(title: String, recording: Recording, poster: User) {
         self.title = title
-        super.init(recording: recording)
+        super.init(recording: recording, poster: poster)
     }
 }

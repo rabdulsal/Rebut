@@ -13,6 +13,7 @@ class Rebut {
     // Represents a base content object consisting of Audio
     
     private (set) var recording: Recording
+    private (set) var poster: User
     private (set) var responses = [Response]()
     private (set) var comments = [Comment]()
     private (set) var sources = [Source]()
@@ -20,6 +21,7 @@ class Rebut {
     
     init(
         recording: Recording,
+        poster: User,
         responses: [Response] = [Response](),
         comments: [Comment] = [Comment](),
         sources: [Source] = [Source]())
@@ -28,6 +30,7 @@ class Rebut {
         self.responses = responses
         self.comments = comments
         self.sources = sources
+        self.poster = poster
     }
     
     func addComment(comment: Comment) {
