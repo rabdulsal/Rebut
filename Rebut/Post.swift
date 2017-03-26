@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Post : Rebut {
     
@@ -17,10 +18,11 @@ class Post : Rebut {
      * - Audio
      * - Title
      */
-    var title: String
+    dynamic var title: String = ""
+    dynamic var rebut: Rebut? = nil
     
-    init(title: String, recording: Recording, poster: User) {
-        self.title = title
-        super.init(recording: recording, poster: poster)
-    }
+//    init(title: String, recording: Recording, poster: User) {
+//        self.title = title
+//        super.init(recording: recording, poster: poster)
+//    }
 }

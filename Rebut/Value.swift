@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Value {
-    private (set) var value: Int
+    dynamic var value: Int = 0
     
     init(value: Int = 0) {
         self.value = value

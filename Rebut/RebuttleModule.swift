@@ -14,6 +14,6 @@ class RebuttleModule {
     func getRebuttles(completion: (_ rebuttle: Rebuttle, _ error: NSError)->Void) {
         
         let rebuts = [Rebut]()
-        completion(Rebuttle.init(rebuts: rebuts), NSError())
+        
     }
 }

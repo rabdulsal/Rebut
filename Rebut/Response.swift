@@ -19,12 +19,12 @@ class Response: Rebut {
      * - Rebut
     */
     
-    var recipient: User
-    var parentRebut: Rebut
+    dynamic var recipient: User?
+    dynamic var parentRebut: Rebut?
     
-    init(rebutter: User, recipient: User, rebut: Rebut, recording: Recording) {
-        self.recipient = recipient
-        self.parentRebut = rebut
-        super.init(recording: recording, poster: rebutter)
-    }
+//    init(rebutter: User, recipient: User, rebut: Rebut, recording: Recording) {
+//        self.recipient = recipient
+//        self.parentRebut = rebut
+//        super.init(recording: recording, poster: rebutter)
+//    }
 }

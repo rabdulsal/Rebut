@@ -21,9 +21,17 @@ class Source : Object {
      */
     dynamic var title: String = ""
     dynamic var link: String = ""
+    dynamic var rebut: Rebut?
 
 //    init(title: String, link: String) {
 //        self.title = title
 //        self.link = link
 //    }
+    
+    func storeSourceWithData(rebut: Rebut, title: String, link: String) {
+        self.rebut = rebut
+        self.title = title
+        self.link = link
+        self.writeToRealm(object: self)
+    }
 }

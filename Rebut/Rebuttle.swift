@@ -7,35 +7,35 @@
 //
 
 import Foundation
+import RealmSwift
 
-
-class Rebuttle {
+class Rebuttle : Object {
     
     // Object representing an array of Rebuts + plus all Votes & Comments
     
-    private (set) var rebuts: [Rebut]
-    private (set) var votes: Vote = Vote()
+    let rebuts = List<Rebut>()
+    dynamic var votes: Int = 0
     
-    init(rebuts: [Rebut], votes: Int = 0) {
-        self.rebuts = rebuts
-        self.votes.update(points: votes)
-    }
+//    init(rebuts: [Rebut], votes: Int = 0) {
+//        self.rebuts = rebuts
+//        self.votes.update(points: votes)
+//    }
     
     func getAllRebutUsers() -> [User] {
         var rebutUsers = [User]()
-        for rebut in rebuts {
-            rebutUsers.append(rebut.poster)
-        }
+//        for rebut in rebuts {
+//            rebutUsers.append(rebut.poster)
+//        }
         return rebutUsers
     }
     
     func rebuttleComments() -> [Comment] {
         var rebutComments = [Comment]()
-        for rebut in rebuts {
-            for comment in rebut.comments {
-                rebutComments.append(comment)
-            }
-        }
+//        for rebut in rebuts {
+//            for comment in rebut.comments {
+//                rebutComments.append(comment)
+//            }
+//        }
         return orderCommentsChronologically(comment: rebutComments)
     }
     

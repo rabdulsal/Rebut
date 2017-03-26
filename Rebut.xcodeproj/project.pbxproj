@@ -33,6 +33,7 @@
 		4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145B1E7E19A300CAFCA1 /* Value.swift */; };
 		4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */; };
 		4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650371E84BE1F0026143C /* RebuttleModule.swift */; };
+		4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650451E86E5F50026143C /* Object+Extension.swift */; };
 		6BFDE14D8D347B022A0C26AE /* Pods_RebutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A22724A51D03F5E9D713D94 /* Pods_RebutUITests.framework */; };
 		EEE21B8585E2591F69515613 /* Pods_RebutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE86D62B67206F886133398 /* Pods_RebutTests.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		4CCE145B1E7E19A300CAFCA1 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
 		4CE650371E84BE1F0026143C /* RebuttleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttleModule.swift; sourceTree = "<group>"; };
+		4CE650451E86E5F50026143C /* Object+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object+Extension.swift"; sourceTree = "<group>"; };
 		4DF486554AA1466250700346 /* Pods-RebutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RebutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RebutTests/Pods-RebutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		943F65BDAFADFC29B7F5B778 /* Pods-Rebut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.release.xcconfig"; sourceTree = "<group>"; };
 		9DF0B5B857BD5A7222FE3C65 /* Pods-Rebut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,7 +217,7 @@
 				4CBC60971E7B6823005C26D4 /* Feed */,
 				4CBC60961E7B6801005C26D4 /* Account */,
 				4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */,
-				4CBC60871E7A40C0005C26D4 /* Classes */,
+				4CBC60871E7A40C0005C26D4 /* Extensions */,
 				4CBC605D1E7A2D42005C26D4 /* Main.storyboard */,
 				4CBC60601E7A2D42005C26D4 /* Assets.xcassets */,
 				4CBC60621E7A2D42005C26D4 /* LaunchScreen.storyboard */,
@@ -242,11 +244,12 @@
 			path = RebutUITests;
 			sourceTree = "<group>";
 		};
-		4CBC60871E7A40C0005C26D4 /* Classes */ = {
+		4CBC60871E7A40C0005C26D4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4CE650451E86E5F50026143C /* Object+Extension.swift */,
 			);
-			name = Classes;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		4CBC60961E7B6801005C26D4 /* Account */ = {
@@ -614,6 +617,7 @@
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
 				4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */,
+				4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */,
 				4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */,
 				4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */,
 				4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */,

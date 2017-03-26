@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UIKit
 
 protocol RecorderViewDelegate : class {
     func didFinishRecording(_ recording: Recording)

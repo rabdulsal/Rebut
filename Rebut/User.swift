@@ -7,18 +7,27 @@
 //
 
 import Foundation
+import RealmSwift
 
-class User {
+class User : Object {
     
     // Represents a base User object
     
-    private (set) var name: String
-    private (set) var karma: Karma = Karma()
-    private (set) var rebuttles: [Rebuttle]
+    dynamic var name: String = ""
+    dynamic var karma: Int = 0
+//    dynamic var rebuttles = [Rebuttle]()
+    let rebuttles = List<Rebuttle>()
     
-    init(name: String, karma: Int=0, rebuttles: [Rebuttle] = [Rebuttle]()) {
+//    init(name: String, karma: Int=0, rebuttles: [Rebuttle] = [Rebuttle]()) {
+//        self.name = name
+//        self.karma.update(points: karma)
+//        self.rebuttles = rebuttles
+//    }
+    
+    func storeUserWithData(name: String, karma: Int) {
         self.name = name
-        self.karma.update(points: karma)
-        self.rebuttles = rebuttles
+        self.karma = karma
+        self.writeToRealm(object: self)
+        
     }
 }

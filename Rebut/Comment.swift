@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Comment {
+class Comment : Object {
     
     // Represents a text-based reply to a Rebut consisting of a User recipient and text comment
     
@@ -18,15 +19,15 @@ struct Comment {
      * - Recipient
      * - Rebut
      */
-    private (set) var comment: String
-    private (set) var commenter: User
-    private (set) var recipient: User
-    private (set) var parentRebut: Rebut
+    dynamic var comment: String = ""
+    dynamic var commenter: User?
+    dynamic var recipient: User?
+    dynamic var parentRebut: Rebut?
     
-    init(comment: String, commenter: User, recipient: User, rebut: Rebut) {
-        self.comment = comment
-        self.commenter = commenter
-        self.recipient = recipient
-        self.parentRebut = rebut
-    }
+//    init(comment: String, commenter: User, recipient: User, rebut: Rebut) {
+//        self.comment = comment
+//        self.commenter = commenter
+//        self.recipient = recipient
+//        self.parentRebut = rebut
+//    }
 }
