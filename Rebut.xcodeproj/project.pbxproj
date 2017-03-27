@@ -12,7 +12,8 @@
 		4C1906521E7B241B003DDCC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906511E7B241B003DDCC5 /* User.swift */; };
 		4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906531E7B246E003DDCC5 /* Commenter.swift */; };
 		4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906551E7B3E4E003DDCC5 /* Source.swift */; };
-		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttle.swift */; };
+		4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */; };
+		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
@@ -77,8 +78,9 @@
 		4C1906511E7B241B003DDCC5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C1906531E7B246E003DDCC5 /* Commenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commenter.swift; sourceTree = "<group>"; };
 		4C1906551E7B3E4E003DDCC5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalTableViewCell.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
-		4CA3AF591E80E4F8006BE3F0 /* Rebuttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttle.swift; sourceTree = "<group>"; };
+		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttleViewModel.swift; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +170,7 @@
 		4CA3AF561E80E4AA006BE3F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4CA3AF591E80E4F8006BE3F0 /* Rebuttle.swift */,
+				4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -176,6 +178,7 @@
 		4CA3AF571E80E4B9006BE3F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -630,8 +633,9 @@
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
 				4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
-				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttle.swift in Sources */,
+				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
+				4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,

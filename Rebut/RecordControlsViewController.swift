@@ -74,6 +74,8 @@ class RecordControlsViewController : UIViewController {
 extension RecordControlsViewController : RecorderViewDelegate {
     internal func didFinishRecording(_ recording: Recording) {
         allRecordings.insert(recording, at: 0)
+        // Save to Realm
+        
         print(recording.url)
         recordingsTableView.reloadData()
     }

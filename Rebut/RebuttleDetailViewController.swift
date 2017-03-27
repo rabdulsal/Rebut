@@ -13,8 +13,8 @@ import RealmSwift
 class RebuttleDetailViewController : UIViewController {
     @IBOutlet weak var rebuttleScrollView: UIScrollView!
     @IBOutlet weak var commentsTableView: UITableView!
-    var rebuttleViewModel: RebuttleViewModel?
-    var rebuttle: Rebuttle? // TODO: Will be fetched from previous VC
+    var rebuttleViewModel: RebuttalViewModel?
+    var rebuttle: Rebuttal? // TODO: Will be fetched from previous VC
     
     let realm = try! Realm()
     

@@ -1,62 +1,58 @@
 //
-//  RebuttleViewModel.swift
+//  RebuttalViewModel.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/21/17.
-//  Copyright © 2017 Rebuttle Inc. All rights reserved.
+//  Copyright © 2017 rebuttal Inc. All rights reserved.
 //
 
 import Foundation
 import UIKit
 import FDWaveformView
 
-class RebuttleViewModel : NSObject {
+class RebuttalViewModel : NSObject {
     
     // --- Manages the updating of the RecordControlsVC scrollView
     
-    var rebuttle: Rebuttle
+    //var rebuttal: Rebuttal Commented for now
+    var rebuts: [Rebut]
     var allRecordings = [Recording]()
-    var rebuttleScrollView: UIScrollView
+    var rebuttalScrollView: UIScrollView
     var recordingWaveFormViews = [FDWaveformView]()
     
-    init(rebuttle: Rebuttle, scrollView: UIScrollView) {
-        self.rebuttle = rebuttle
-        self.rebuttleScrollView = scrollView
+    init(rebuts: [Rebut],scrollView: UIScrollView) {
+        //self.rebuttal = rebuttal
+        self.rebuts = rebuts
+        self.rebuttalScrollView = scrollView
         super.init()
         self.makeWaveFormScrollView()
         // Set recordingWaveFormView delegate?
     }
     
     func makeWaveFormScrollView() {
-        for rebut in rebuttle.rebuts { self.makeWaveFormView(with: rebut) }
-        let totalScrollWidth = CGFloat(Int(rebuttleScrollView.bounds.width)*rebuttle.rebuts.count)
-        rebuttleScrollView.contentSize = CGSize(width: totalScrollWidth, height: rebuttleScrollView.bounds.height)
+        for rebut in rebuts { self.makeWaveFormView(with: rebut) }
+        let totalScrollWidth = CGFloat(Int(rebuttalScrollView.bounds.width)*rebuts.count)
+        rebuttalScrollView.contentSize = CGSize(width: totalScrollWidth, height: rebuttalScrollView.bounds.height)
     }
     
     func makeWaveFormView(with rebut: Rebut) {
         for (index,waveFormView) in recordingWaveFormViews.enumerated() {
-            let scrollOffset = CGFloat(Int(rebuttleScrollView.bounds.width)*index)
-            let frame = CGRect(x: scrollOffset, y: rebuttleScrollView.bounds.origin.y, width: rebuttleScrollView.bounds.width, height: rebuttleScrollView.bounds.height)
+            let scrollOffset = CGFloat(Int(rebuttalScrollView.bounds.width)*index)
+            let frame = CGRect(x: scrollOffset, y: rebuttalScrollView.bounds.origin.y, width: rebuttalScrollView.bounds.width, height: rebuttalScrollView.bounds.height)
             waveFormView.delegate = self
             waveFormView.frame = frame
             waveFormView.audioURL = rebut.recording.url
             waveFormView.progressSamples = waveFormView.totalSamples / 2
-            rebuttleScrollView.addSubview(waveFormView)
+            rebuttalScrollView.addSubview(waveFormView)
         }
     }
     
-    func updateRebuttleViews(newRecording: Recording) {
+    func updaterebuttalViews(newRecording: Recording) {
         
-    }
-    
-    func someFunc() {
-        let rebut = rebuttle.rebuts
-        let comments = rebuttle.rebuttleComments()
-    }
-    
+    }    
 }
 
-extension RebuttleViewModel : FDWaveformViewDelegate {
+extension RebuttalViewModel : FDWaveformViewDelegate {
     func waveformViewWillRender(_ waveformView: FDWaveformView) {
        // self.startRendering = Date()
     }

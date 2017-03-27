@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
 class RebuttleModule {
     
     
-    func getRebuttles(completion: (_ rebuttle: Rebuttle, _ error: NSError)->Void) {
+    func getRebuttles(completion: (_ rebuttle: Rebuttal, _ error: NSError)->Void) {
         
         let rebuts = [Rebut]()
         

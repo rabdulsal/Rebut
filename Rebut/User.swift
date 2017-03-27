@@ -16,7 +16,7 @@ class User : Object {
     dynamic var name: String = ""
     dynamic var karma: Int = 0
 //    dynamic var rebuttles = [Rebuttle]()
-    let rebuttles = List<Rebuttle>()
+    let rebuttles = List<Rebuttal>()
     
 //    init(name: String, karma: Int=0, rebuttles: [Rebuttle] = [Rebuttle]()) {
 //        self.name = name

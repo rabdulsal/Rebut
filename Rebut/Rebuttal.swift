@@ -1,5 +1,5 @@
 //
-//  Rebuttle.swift
+//  Rebuttal.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/20/17.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Rebuttle : Object {
+class Rebuttal : Object {
     
     // Object representing an array of Rebuts + plus all Votes & Comments
     
@@ -29,7 +29,7 @@ class Rebuttle : Object {
         return rebutUsers
     }
     
-    func rebuttleComments() -> [Comment] {
+    func rebuttalComments() -> [Comment] {
         var rebutComments = [Comment]()
 //        for rebut in rebuts {
 //            for comment in rebut.comments {
