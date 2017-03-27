@@ -14,18 +14,19 @@ class Rebut : Object {
     // Represents a base content object consisting of Audio
     
 //    private (set) var recording: Recording TODO: Must store Recording as NSData object
-    dynamic var recording: NSData = NSData()
+    dynamic var recordingData: NSData = NSData()
     dynamic var poster: User?
+    dynamic var likes: Int = 0
     let responses = List<Response>()
     let comments = List<Comment>()
     let sources = List<Source>()
+    var recording: Recording!
     
-    dynamic var likes: Int = 0
     
     func makeDataWithPath(filePath: String) {
         let url = URL.init(fileURLWithPath: filePath)
         do {
-            try recording = NSData.init(contentsOf: url)
+            try recordingData = NSData.init(contentsOf: url)
         } catch {
             print(error)
         }
