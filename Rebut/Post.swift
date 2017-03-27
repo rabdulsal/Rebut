@@ -25,4 +25,17 @@ class Post : Rebut {
 //        self.title = title
 //        super.init(recording: recording, poster: poster)
 //    }
+    
+    func makePost(with title: String, rebut: Rebut) {
+        self.title = title
+        self.rebut = rebut
+        //self.writeToRealm(object: self)
+        do {
+            try realm?.write {
+                realm?.add(self)
+            }
+        } catch {
+            print(error)
+        }
+    }
 }

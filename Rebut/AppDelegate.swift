@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // TODO: Fetch Rebuttle data here
+        
         return true
     }
 

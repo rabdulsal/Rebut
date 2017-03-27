@@ -20,9 +20,12 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var recordingWaveForm: FDWaveformView!
     
     var allRecordings = [Recording]()
-    var allRecordingFiles = [String]()
+    var allRecordingFiles: [String] {
+        return rebutModule.allRecordings()
+    }
     var recorderView: RebutRecordViewController!
     var player = AVAudioPlayer() // TODO: Eventually move to ViewModel
+    var rebutModule = RebuttalModule()
     
     // Rendering
     fileprivate var startRendering = Date()
@@ -74,8 +77,6 @@ class RecordControlsViewController : UIViewController {
 extension RecordControlsViewController : RecorderViewDelegate {
     internal func didFinishRecording(_ recording: Recording) {
         allRecordings.insert(recording, at: 0)
-        // Save to Realm
-        
         print(recording.url)
         recordingsTableView.reloadData()
     }
@@ -108,7 +109,7 @@ extension RecordControlsViewController : UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allRecordingFiles.count > 0 ? allRecordingFiles.count : 0
+        return allRecordingFiles.count
     }
 }
 
@@ -116,8 +117,9 @@ extension RecordControlsViewController : UITableViewDataSource {
 
 extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
-        allRecordingFiles.insert(filePath, at: 0)
+        //allRecordingFiles.insert(filePath, at: 0)
         print(filePath)
+        rebutModule.updateAllRebuts(with: filePath)
         controller.dismiss(animated: true) { 
             self.recordingsTableView.reloadData()
         }

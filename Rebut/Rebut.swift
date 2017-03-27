@@ -20,8 +20,12 @@ class Rebut : Object {
     let responses = List<Response>()
     let comments = List<Comment>()
     let sources = List<Source>()
-    var recording: Recording!
+    var recording: Recording?
+    dynamic var recordingFilePath = ""
     
+    override static func ignoredProperties() -> [String] {
+        return ["recording"]
+    }
     
     func makeDataWithPath(filePath: String) {
         let url = URL.init(fileURLWithPath: filePath)
@@ -32,10 +36,22 @@ class Rebut : Object {
         }
     }
     
-    func storeRebutWithData(recordingFile: String, poster: User, responses: [Response]?=nil, likes: Int=0) {
-        self.makeDataWithPath(filePath: recordingFile)
+    func updateRecording(with recording: Recording) {
+        
+    }
+    
+    func makeRebut(with recordingFile: String, poster: User, responses: [Response]?=nil, likes: Int=0) {
+        //self.makeDataWithPath(filePath: recordingFile)
         self.poster = poster
-        self.writeToRealm(object: self)
+        self.recordingFilePath = recordingFile
+        //self.writeToRealm(object: self)
+        do {
+            try realm?.write {
+                realm?.add(self)
+            }
+        } catch {
+            print(error)
+        }
     }
 //    init(
 //        recording: Recording,

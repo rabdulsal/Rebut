@@ -41,7 +41,7 @@ class RebuttalViewModel : NSObject {
             let frame = CGRect(x: scrollOffset, y: rebuttalScrollView.bounds.origin.y, width: rebuttalScrollView.bounds.width, height: rebuttalScrollView.bounds.height)
             waveFormView.delegate = self
             waveFormView.frame = frame
-            waveFormView.audioURL = rebut.recording.url
+            waveFormView.audioURL = rebut.recording?.url
             waveFormView.progressSamples = waveFormView.totalSamples / 2
             rebuttalScrollView.addSubview(waveFormView)
         }

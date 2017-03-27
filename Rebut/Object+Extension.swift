@@ -10,6 +10,11 @@ import Foundation
 import RealmSwift
 
 extension Object {
+    
+    func storeData() {
+        writeToRealm(object: self)
+    }
+    
     func writeToRealm(object: Object) {
         //let realm = try! Realm()
         do {

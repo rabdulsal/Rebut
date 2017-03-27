@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+import Foundation
 
 class RebutFeedViewController: UIViewController {
     
@@ -16,27 +16,17 @@ class RebutFeedViewController: UIViewController {
     @IBOutlet weak var rebuttalFeedTableView: UITableView!
     
     let reuseIdentifier = "RebuttalCell"
-    let realm = try! Realm()
-    var allRebuttals: Results<Rebut> {
-        get {
-            return realm.objects(Rebut.self)
-        }
-    }
-    
-    var allRebuts = [Rebut]()
+    var rebutModule = RebuttalModule()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         rebuttalFeedTableView.delegate = self
         rebuttalFeedTableView.dataSource = self
-        makeRebutsArrayFromResults()
     }
 
-    func makeRebutsArrayFromResults() {
-        for rebut in allRebuttals {
-            allRebuts.append(rebut)
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }
 
@@ -50,12 +40,12 @@ extension RebutFeedViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! RebuttalTableViewCell
-        cell.configureCell(with: allRebuts)
+        cell.configureCell(with: rebutModule.allRebuts)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allRebuts.count
+        return rebutModule.allRebuts.count
     }
 }
 
