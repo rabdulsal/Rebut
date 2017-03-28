@@ -24,27 +24,22 @@ class RebuttalViewModel : NSObject {
         //self.rebuttal = rebuttal
         self.rebuts = rebuts
         self.rebuttalScrollView = scrollView
+        self.recordingWaveFormViews = rebuts.map { $0.waveFormView }
         super.init()
         self.makeWaveFormScrollView()
         // Set recordingWaveFormView delegate?
     }
     
     func makeWaveFormScrollView() {
-        for rebut in rebuts { self.makeWaveFormView(with: rebut) }
-        let totalScrollWidth = CGFloat(Int(rebuttalScrollView.bounds.width)*rebuts.count)
-        rebuttalScrollView.contentSize = CGSize(width: totalScrollWidth, height: rebuttalScrollView.bounds.height)
-    }
-    
-    func makeWaveFormView(with rebut: Rebut) {
         for (index,waveFormView) in recordingWaveFormViews.enumerated() {
             let scrollOffset = CGFloat(Int(rebuttalScrollView.bounds.width)*index)
             let frame = CGRect(x: scrollOffset, y: rebuttalScrollView.bounds.origin.y, width: rebuttalScrollView.bounds.width, height: rebuttalScrollView.bounds.height)
             waveFormView.delegate = self
             waveFormView.frame = frame
-            waveFormView.audioURL = rebut.recording?.url
-            waveFormView.progressSamples = waveFormView.totalSamples / 2
             rebuttalScrollView.addSubview(waveFormView)
         }
+        let totalScrollWidth = CGFloat(Int(rebuttalScrollView.bounds.width)*rebuts.count)
+        rebuttalScrollView.contentSize = CGSize(width: totalScrollWidth, height: rebuttalScrollView.bounds.height)
     }
     
     func updaterebuttalViews(newRecording: Recording) {

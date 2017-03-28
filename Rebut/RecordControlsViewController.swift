@@ -25,7 +25,7 @@ class RecordControlsViewController : UIViewController {
     }
     var recorderView: RebutRecordViewController!
     var player = AVAudioPlayer() // TODO: Eventually move to ViewModel
-    var rebutModule = RebuttalModule()
+    var rebutModule = RebuttalModule.shared
     
     // Rendering
     fileprivate var startRendering = Date()

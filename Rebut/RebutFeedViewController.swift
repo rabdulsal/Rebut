@@ -16,7 +16,7 @@ class RebutFeedViewController: UIViewController {
     @IBOutlet weak var rebuttalFeedTableView: UITableView!
     
     let reuseIdentifier = "RebuttalCell"
-    var rebutModule = RebuttalModule()
+    var rebutModule = RebuttalModule.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class RebutFeedViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        rebuttalFeedTableView.reloadData()
     }
 }
 
@@ -45,7 +46,7 @@ extension RebutFeedViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rebutModule.allRebuts.count
+        return rebutModule.allRebuttals.count
     }
 }
 

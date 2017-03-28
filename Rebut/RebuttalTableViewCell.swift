@@ -16,7 +16,7 @@ class RebuttalTableViewCell : UITableViewCell {
     
     func configureCell(with rebuts: [Rebut]) {
         viewModel = RebuttalViewModel(rebuts: rebuts, scrollView: scrollView)
-        let post = rebuts.first as! Post
-        self.titleLabel.text = post.title
+        let post = rebuts.first
+        self.titleLabel.text = post?.recordingFilePath
     }
 }

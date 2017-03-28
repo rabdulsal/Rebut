@@ -13,9 +13,16 @@ class RebuttalModule {
     
     // --- Manages creation of Posts, Rebuts, etc & updating of related Models
     
-    var allRebuts: [Rebut]
+    // Can't init is singleton
+    private init() { }
+    
+    static let shared = RebuttalModule()
+    
+    var allRebuts = [Rebut]()
     var post: Post?
-    var responses: [Rebut]
+    var rebuttal: Rebuttal?
+    var responses = [Rebut]()
+    var allRebuttals = [Rebuttal]()
     
     let realm = try! Realm()
     var allRealmRebuts: Results<Rebut> {
@@ -23,13 +30,14 @@ class RebuttalModule {
             return realm.objects(Rebut.self)
         }
     }
-    
+    /*
     init(post:Post?=nil, responses:[Rebut]=[Rebut](), rebuts:[Rebut]=[Rebut]()) {
         self.post = post
         self.responses = responses
         self.allRebuts = rebuts
-        makeRebutsArrayFromResults()
+       // makeRebutsArrayFromResults()
     }
+     */
     
     func updateAllRebuts(with recordingFile: String) {
         // Mock User
@@ -45,6 +53,15 @@ class RebuttalModule {
             self.post = newPost
         }
         self.allRebuts.append(newRebut)
+        
+        if self.rebuttal == nil {
+            let rebuttal = Rebuttal()
+            rebuttal.makeRebuttal(with: allRebuts)
+            self.rebuttal = rebuttal
+            self.allRebuttals.append(rebuttal)
+        } else {
+            self.rebuttal?.allRebuts = self.allRebuts
+        }
     }
     
     func allRecordings() -> [String] {
@@ -53,9 +70,5 @@ class RebuttalModule {
 }
 
 private extension RebuttalModule {
-    func makeRebutsArrayFromResults() {
-        for rebut in allRealmRebuts {
-            allRebuts.append(rebut)
-        }
-    }
+    
 }

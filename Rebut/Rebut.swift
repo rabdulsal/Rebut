@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import FDWaveformView
 
 class Rebut : Object {
     
@@ -21,10 +22,11 @@ class Rebut : Object {
     let comments = List<Comment>()
     let sources = List<Source>()
     var recording: Recording?
+    var waveFormView = FDWaveformView()
     dynamic var recordingFilePath = ""
     
     override static func ignoredProperties() -> [String] {
-        return ["recording"]
+        return ["recording","waveFormView"]
     }
     
     func makeDataWithPath(filePath: String) {
@@ -44,6 +46,8 @@ class Rebut : Object {
         //self.makeDataWithPath(filePath: recordingFile)
         self.poster = poster
         self.recordingFilePath = recordingFile
+        self.waveFormView.audioURL = URL(fileURLWithPath: recordingFile)
+        self.waveFormView.progressSamples = self.waveFormView.totalSamples / 2
         //self.writeToRealm(object: self)
         do {
             try realm?.write {
