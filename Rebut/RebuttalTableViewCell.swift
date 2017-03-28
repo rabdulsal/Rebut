@@ -13,10 +13,11 @@ class RebuttalTableViewCell : UITableViewCell {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleLabel: UILabel!
     var viewModel: RebuttalViewModel!
+    let module = RebuttalModule.shared
     
     func configureCell(with rebuts: [Rebut]) {
         viewModel = RebuttalViewModel(rebuts: rebuts, scrollView: scrollView)
-        let post = rebuts.first
-        self.titleLabel.text = post?.recordingFilePath
+        let post = module.getPost()
+        self.titleLabel.text = post?.title
     }
 }

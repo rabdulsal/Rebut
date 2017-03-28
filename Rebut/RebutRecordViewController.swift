@@ -77,7 +77,6 @@ class RebutRecordViewController: UIViewController , RecorderDelegate {
     }
     
     func audioMeterDidUpdate(_ db: Float) {
-        print("db level: %f", db)
         
         self.recording.recorder?.updateMeters()
         let ALPHA = 0.05

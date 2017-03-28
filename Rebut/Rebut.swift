@@ -11,7 +11,9 @@ import RealmSwift
 import FDWaveformView
 
 class Rebut : Object {
-    
+    enum RebutType {
+        case post, rebut
+    }
     // Represents a base content object consisting of Audio
     
 //    private (set) var recording: Recording TODO: Must store Recording as NSData object
@@ -21,12 +23,15 @@ class Rebut : Object {
     let responses = List<Response>()
     let comments = List<Comment>()
     let sources = List<Source>()
-    var recording: Recording?
-    var waveFormView = FDWaveformView()
     dynamic var recordingFilePath = ""
     
+    // Ignored Properties
+    var recording: Recording?
+    var waveFormView = FDWaveformView()
+    var rebutType: RebutType = .rebut
+    
     override static func ignoredProperties() -> [String] {
-        return ["recording","waveFormView"]
+        return ["recording","waveFormView","rebutType"]
     }
     
     func makeDataWithPath(filePath: String) {
@@ -42,11 +47,12 @@ class Rebut : Object {
         
     }
     
-    func makeRebut(with recordingFile: String, poster: User, responses: [Response]?=nil, likes: Int=0) {
+    func makeRebut(with recordingFile: String, poster: User, rebutType: RebutType = .rebut, responses: [Response]?=nil, likes: Int=0) {
         //self.makeDataWithPath(filePath: recordingFile)
         self.poster = poster
         self.recordingFilePath = recordingFile
-        self.waveFormView.audioURL = URL(fileURLWithPath: recordingFile)
+        self.rebutType = rebutType
+        self.waveFormView.audioURL = URL(fileURLWithPath: self.recordingFilePath)
         self.waveFormView.progressSamples = self.waveFormView.totalSamples / 2
         //self.writeToRealm(object: self)
         do {

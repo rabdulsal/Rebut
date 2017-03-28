@@ -51,8 +51,10 @@ class RebuttalModule {
             let newPost = Post()
             newPost.makePost(with: "\(user.name)'s Parent Post", rebut: newRebut)
             self.post = newPost
+            self.allRebuts.append(self.post!)
+        } else {
+            self.allRebuts.append(newRebut)
         }
-        self.allRebuts.append(newRebut)
         
         if self.rebuttal == nil {
             let rebuttal = Rebuttal()
@@ -66,6 +68,17 @@ class RebuttalModule {
     
     func allRecordings() -> [String] {
         return allRebuts.map { $0.recordingFilePath }
+    }
+    
+    func getPost() -> Post? {
+        if let rebuts = rebuttal?.allRebuts {
+            for rebut in rebuts {
+                if rebut.rebutType == .post {
+                    return rebut as? Post
+                }
+            }
+        }
+        return nil
     }
 }
 

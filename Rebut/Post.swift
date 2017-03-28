@@ -26,9 +26,10 @@ class Post : Rebut {
 //        super.init(recording: recording, poster: poster)
 //    }
     
-    func makePost(with title: String, rebut: Rebut) {
+    func makePost(with title: String, rebut: Rebut, rebutType: RebutType = .post) {
         self.title = title
         self.rebut = rebut
+        self.makeRebut(with: rebut.recordingFilePath, poster: rebut.poster!, rebutType: rebutType)
         //self.writeToRealm(object: self)
         do {
             try realm?.write {
