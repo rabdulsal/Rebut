@@ -50,7 +50,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pvL-55-7Ox" id="RpX-7g-STp">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-PJ-afr">
@@ -122,7 +122,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQa-No-Ah9" id="lRl-Fk-iNn">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o6p-06-cp6">
@@ -146,15 +146,33 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="123"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </view>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apw-ee-8cY">
+                                                                        <rect key="frame" x="114.5" y="36.5" width="100" height="50"/>
+                                                                        <color key="backgroundColor" red="0.52941176470588236" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="50" id="6hm-2J-lno"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="wju-mr-Efj"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                        <state key="normal" title="Play">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="pressedPlay:" destination="RNG-yw-WdR" eventType="touchUpInside" id="MG1-LI-Qpx"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
+                                                                <constraint firstItem="apw-ee-8cY" firstAttribute="centerY" secondItem="raY-1t-psX" secondAttribute="centerY" id="8Pg-hf-N43"/>
                                                                 <constraint firstAttribute="bottomMargin" secondItem="raY-1t-psX" secondAttribute="bottom" constant="-8" id="919-4E-ZqB"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="raY-1t-psX" secondAttribute="trailing" constant="-8" id="ROg-Ud-t7H"/>
+                                                                <constraint firstItem="apw-ee-8cY" firstAttribute="centerX" secondItem="raY-1t-psX" secondAttribute="centerX" id="djG-7m-0Kb"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="leading" secondItem="RNG-yw-WdR" secondAttribute="leadingMargin" constant="-8" id="mYb-Jv-Umb"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="top" secondItem="RNG-yw-WdR" secondAttribute="topMargin" constant="-8" id="w4p-BA-U6O"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="playButton" destination="apw-ee-8cY" id="tTk-au-chJ"/>
                                                                 <outlet property="waveformView" destination="raY-1t-psX" id="E0W-17-aVc"/>
                                                             </connections>
                                                         </collectionViewCell>

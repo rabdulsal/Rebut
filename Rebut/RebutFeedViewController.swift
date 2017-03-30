@@ -49,4 +49,3 @@ extension RebutFeedViewController : UITableViewDataSource {
         return rebutModule.allRebuttals.count
     }
 }
-

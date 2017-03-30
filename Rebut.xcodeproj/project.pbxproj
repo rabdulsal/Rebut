@@ -13,6 +13,7 @@
 		4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906531E7B246E003DDCC5 /* Commenter.swift */; };
 		4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906551E7B3E4E003DDCC5 /* Source.swift */; };
 		4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */; };
+		4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6054C71E8D5B800006514E /* RebutPlayer.swift */; };
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
@@ -80,6 +81,7 @@
 		4C1906531E7B246E003DDCC5 /* Commenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commenter.swift; sourceTree = "<group>"; };
 		4C1906551E7B3E4E003DDCC5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalTableViewCell.swift; sourceTree = "<group>"; };
+		4C6054C71E8D5B800006514E /* RebutPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayer.swift; sourceTree = "<group>"; };
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				4CE650371E84BE1F0026143C /* RebuttleModule.swift */,
 				4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */,
+				4C6054C71E8D5B800006514E /* RebutPlayer.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -628,6 +631,7 @@
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
 				4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */,
+				4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */,
 				4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */,
 				4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */,
 				4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */,

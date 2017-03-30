@@ -13,7 +13,17 @@ import FDWaveformView
 class RebuttalWaveFormCell : UICollectionViewCell {
     
     @IBOutlet weak var waveformView: FDWaveformView!
-    func configureCell(with rebut: Rebut) {
+    @IBOutlet weak var playButton: UIButton!
+    var rebut: Rebut?
+    var playDelegate: PlayRebutDelegate?
+    
+    @IBAction func pressedPlay(_ sender: Any) {
+        playDelegate?.shouldPlayRebut(rebut: self.rebut!)
+    }
+    
+    func configureCell(with rebut: Rebut, delegate: PlayRebutDelegate) {
+        self.rebut = rebut
+        self.playDelegate = delegate
         waveformView.audioURL = URL(fileURLWithPath: rebut.recordingFilePath)
         waveformView.progressSamples = waveformView.totalSamples / 2
     }

@@ -9,6 +9,10 @@
 import Foundation
 import RealmSwift
 
+protocol PlayRebutDelegate {
+    func shouldPlayRebut(rebut: Rebut)
+}
+
 class RebuttalModule {
     
     // --- Manages creation of Posts, Rebuts, etc & updating of related Models
@@ -23,7 +27,9 @@ class RebuttalModule {
     var rebuttal: Rebuttal?
     var responses = [Rebut]()
     var allRebuttals = [Rebuttal]()
+    var player = RebutPlayer()
     
+    // Realm stuff
     let realm = try! Realm()
     var allRealmRebuts: Results<Rebut> {
         get {
@@ -38,6 +44,10 @@ class RebuttalModule {
        // makeRebutsArrayFromResults()
     }
      */
+    
+    func play(rebut: Rebut) {
+        player.play(rebut: rebut)
+    }
     
     func updateAllRebuts(with recordingFile: String) {
         // Mock User

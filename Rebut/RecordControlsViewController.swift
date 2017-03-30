@@ -20,13 +20,12 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var recordingWaveForm: FDWaveformView!
     
     var allRecordings = [Recording]()
-    var allRecordingFiles: [String] {
-        return rebutModule.allRecordings()
+    var allRebuts: [Rebut] {
+        return rebutModule.allRebuts
     }
     var recorderView: RebutRecordViewController!
-    var player = AVAudioPlayer() // TODO: Eventually move to ViewModel
     var rebutModule = RebuttalModule.shared
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,12 +81,8 @@ extension RecordControlsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let filePath = allRecordingFiles[indexPath.row]
-        let url = NSURL.fileURL(withPath: filePath)
-        
-        recordingWaveForm.audioURL = url
-        recordingWaveForm.progressSamples = self.recordingWaveForm.totalSamples / 2
-        play(url: url as NSURL)
+        let rebut = allRebuts[indexPath.row]
+        rebutModule.play(rebut: rebut)
     }
 }
 
@@ -96,14 +91,14 @@ extension RecordControlsViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordControlsIdentifier", for: indexPath) as! RecordingTableViewCell
 
-        let recording = allRecordingFiles[indexPath.row]
-        cell.title.text = "\(recording)"
+        let rebut = allRebuts[indexPath.row]
+        cell.title.text = "\(rebut.recordingFilePath)"
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allRecordingFiles.count
+        return allRebuts.count
     }
 }
 
@@ -111,7 +106,7 @@ extension RecordControlsViewController : UITableViewDataSource {
 
 extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
-        //allRecordingFiles.insert(filePath, at: 0)
+        //allRebuts.insert(filePath, at: 0)
         print(filePath)
         rebutModule.updateAllRebuts(with: filePath)
         controller.dismiss(animated: true) { 
@@ -130,21 +125,4 @@ extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
 extension RecordControlsViewController: FDWaveformViewDelegate { }
 
 private extension RecordControlsViewController { // TODO: Eventually place in ViewModel
-    
-    func play(url:NSURL) {
-        print("playing \(url)")
-        
-        do {
-            self.player = try AVAudioPlayer(contentsOf: url as URL)
-            player.prepareToPlay()
-            player.volume = 1.0
-            player.play()
-        } catch let error as NSError {
-            //self.player = nil
-            print(error.localizedDescription)
-        } catch {
-            print("AVAudioPlayer init failed")
-        }
-        
-    }
 }

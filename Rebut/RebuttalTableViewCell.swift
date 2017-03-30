@@ -9,15 +9,21 @@
 import Foundation
 import UIKit
 
+protocol RebutPlayerDelegate{
+    func shouldPlayRebut(with rebut: Rebut)
+}
+
 class RebuttalTableViewCell : UITableViewCell {
     @IBOutlet weak var scrollView: UIScrollView! // Will eventually replace as CollectionView
     @IBOutlet weak var rebuttalCollectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var userName: UILabel!
     var rebuts = [Rebut]()
     var viewModel: RebuttalViewModel!
     let module = RebuttalModule.shared
     let identifier = "waveformCell"
+    var playerDelegate: RebutPlayerDelegate?
     
     override func awakeFromNib() {
         rebuttalCollectionView.delegate = self
@@ -43,10 +49,9 @@ class RebuttalTableViewCell : UITableViewCell {
 extension RebuttalTableViewCell : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Get the url & play audio
-        let audioFile = rebuts[indexPath.row]
+        let rebut = rebuts[indexPath.row]
+        module.play(rebut: rebut)
     }
-    
-    
 }
 
 extension RebuttalTableViewCell : UICollectionViewDataSource {
@@ -58,9 +63,14 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
         
         let rebut = rebuts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! RebuttalWaveFormCell
-        cell.configureCell(with: rebut)
+        cell.configureCell(with: rebut, delegate: self)
         return cell
     }
-    
-    
 }
+
+extension RebuttalTableViewCell : PlayRebutDelegate {
+    func shouldPlayRebut(rebut: Rebut) {
+        module.play(rebut: rebut)
+    }
+}
+
