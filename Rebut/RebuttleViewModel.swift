@@ -18,7 +18,7 @@ class RebuttalViewModel : NSObject {
     var rebuts: [Rebut]
     var allRecordings = [Recording]()
     var rebuttalScrollView: UIScrollView
-    var recordingWaveFormViews = [FDWaveformView]()
+    var recordingWaveFormViews = [RebutWaveFormView]()
     
     init(rebuts: [Rebut],scrollView: UIScrollView) {
         //self.rebuttal = rebuttal
@@ -93,9 +93,12 @@ private extension RebuttalViewModel {
         for (index,waveFormView) in recordingWaveFormViews.enumerated() {
             let scrollOffset = CGFloat(Int(rebuttalScrollView.bounds.width)*index)
             let frame = CGRect(x: scrollOffset, y: rebuttalScrollView.bounds.origin.y, width: rebuttalScrollView.bounds.width, height: rebuttalScrollView.bounds.height)
-            waveFormView.delegate = self
+            waveFormView.waveForm.delegate = self
             waveFormView.frame = frame
+            waveFormView.layer.borderWidth = 2
+            waveFormView.layer.borderColor = UIColor.black.cgColor
             rebuttalScrollView.addSubview(waveFormView)
+            
         }
         let totalScrollWidth = CGFloat(Int(rebuttalScrollView.bounds.width)*rebuts.count)
         rebuttalScrollView.contentSize = CGSize(width: totalScrollWidth, height: rebuttalScrollView.bounds.height)
@@ -113,5 +116,62 @@ private extension RebuttalViewModel {
         let scrollerXPos:Int = Int(self.rebuttalScrollView.bounds.width) * scrollOffset
         let scrollPoint      = CGPoint(x:CGFloat(scrollerXPos), y:0)
         rebuttalScrollView.setContentOffset(scrollPoint, animated: true)
+    }
+    
+    func makePlayButton(for waveFormView:FDWaveformView) {
+        let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        playButton.setTitle("Play", for: .normal)
+        playButton.center = waveFormView.center
+        playButton.layer.cornerRadius = 2
+        playButton.layer.borderWidth = 1
+        playButton.layer.borderColor = UIColor.black.cgColor
+        playButton.addTarget(self, action: #selector(self.playButtonPressed), for: .touchUpInside)
+        waveFormView.addSubview(playButton)
+        waveFormView.setNeedsLayout()
+    }
+    
+    @objc func playButtonPressed() {
+        print("Play Button pressed!")
+    }
+}
+
+protocol PlayButtonDelegate {
+    func didPressPlayButton()
+}
+
+class RebutWaveFormView : UIView {
+    
+    var waveForm = FDWaveformView()
+    var playButtonDelegate: PlayButtonDelegate?
+    
+    required public init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+    }
+    
+    override init(frame rect: CGRect) {
+        super.init(frame: rect)
+        self.waveForm.frame = frame
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        makePlayButton()
+    }
+    
+    func makePlayButton() {
+        let playButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        playButton.setTitle("Play", for: .normal)
+        playButton.tintColor = UIColor.black
+        playButton.center = self.center
+        playButton.layer.cornerRadius = 2
+        playButton.layer.borderWidth = 1
+        playButton.layer.borderColor = UIColor.black.cgColor
+        playButton.addTarget(self, action: #selector(self.playButtonPressed), for: .touchUpInside)
+        self.addSubview(playButton)
+    }
+    
+    @objc func playButtonPressed() {
+        print("Play Button pressed!")
+        self.playButtonDelegate?.didPressPlayButton()
     }
 }

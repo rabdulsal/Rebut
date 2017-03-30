@@ -14,7 +14,7 @@ import FDWaveformView
 
 class RecordControlsViewController : UIViewController {
     
-    @IBOutlet weak var startBtn: UIButton!
+    @IBOutlet weak var startBtn: UIButton! // Color: #8700FF
     @IBOutlet weak var stopBtn: UIButton!
     @IBOutlet weak var recordingsTableView: UITableView!
     @IBOutlet weak var recordingWaveForm: FDWaveformView!
@@ -26,12 +26,6 @@ class RecordControlsViewController : UIViewController {
     var recorderView: RebutRecordViewController!
     var player = AVAudioPlayer() // TODO: Eventually move to ViewModel
     var rebutModule = RebuttalModule.shared
-    
-    // Rendering
-    fileprivate var startRendering = Date()
-    fileprivate var endRendering = Date()
-    fileprivate var startLoading = Date()
-    fileprivate var endLoading = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,28 +127,7 @@ extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
 
 // MARK: - FDWaveformViewDelegate
 
-extension RecordControlsViewController: FDWaveformViewDelegate {
-    func waveformViewWillRender(_ waveformView: FDWaveformView) {
-        self.startRendering = Date()
-    }
-    
-    func waveformViewDidRender(_ waveformView: FDWaveformView) {
-        self.endRendering = Date()
-        NSLog("FDWaveformView rendering done, took %f seconds", self.endRendering.timeIntervalSince(self.startRendering))
-        UIView.animate(withDuration: 0.25, animations: {() -> Void in
-            waveformView.alpha = 1.0
-        })
-    }
-    
-    func waveformViewWillLoad(_ waveformView: FDWaveformView) {
-        self.startLoading = Date()
-    }
-    
-    func waveformViewDidLoad(_ waveformView: FDWaveformView) {
-        self.endLoading = Date()
-        NSLog("FDWaveformView loading done, took %f seconds", self.endLoading.timeIntervalSince(self.startLoading))
-    }
-}
+extension RecordControlsViewController: FDWaveformViewDelegate { }
 
 private extension RecordControlsViewController { // TODO: Eventually place in ViewModel
     

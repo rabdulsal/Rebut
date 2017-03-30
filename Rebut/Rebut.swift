@@ -27,7 +27,7 @@ class Rebut : Object {
     
     // Ignored Properties
     var recording: Recording?
-    var waveFormView = FDWaveformView()
+    var waveFormView = RebutWaveFormView()
     var rebutType: RebutType = .rebut
     
     override static func ignoredProperties() -> [String] {
@@ -52,8 +52,8 @@ class Rebut : Object {
         self.poster = poster
         self.recordingFilePath = recordingFile
         self.rebutType = rebutType
-        self.waveFormView.audioURL = URL(fileURLWithPath: self.recordingFilePath)
-        self.waveFormView.progressSamples = self.waveFormView.totalSamples / 2
+        self.waveFormView.waveForm.audioURL = URL(fileURLWithPath: self.recordingFilePath)
+        self.waveFormView.waveForm.progressSamples = self.waveFormView.waveForm.totalSamples / 2
         //self.writeToRealm(object: self)
         do {
             try realm?.write {
