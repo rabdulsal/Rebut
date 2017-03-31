@@ -14,6 +14,8 @@
 		4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906551E7B3E4E003DDCC5 /* Source.swift */; };
 		4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */; };
 		4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6054C71E8D5B800006514E /* RebutPlayer.swift */; };
+		4C8681131E8EE79800776829 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681121E8EE79800776829 /* PlayButton.swift */; };
+		4C8681151E8F003A00776829 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681141E8F003A00776829 /* CustomColors.swift */; };
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
@@ -82,6 +84,8 @@
 		4C1906551E7B3E4E003DDCC5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalTableViewCell.swift; sourceTree = "<group>"; };
 		4C6054C71E8D5B800006514E /* RebutPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayer.swift; sourceTree = "<group>"; };
+		4C8681121E8EE79800776829 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		4C8681141E8F003A00776829 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
@@ -162,6 +166,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4C8681111E8EE78300776829 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4C8681121E8EE79800776829 /* PlayButton.swift */,
+				4C8681141E8F003A00776829 /* CustomColors.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		4CA3AF401E7F0D2B006BE3F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +235,7 @@
 		4CBC60561E7A2D41005C26D4 /* Rebut */ = {
 			isa = PBXGroup;
 			children = (
+				4C8681111E8EE78300776829 /* Utilities */,
 				4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */,
 				4CE650401E861BEE0026143C /* Helpers */,
 				4CBC60981E7B687A005C26D4 /* Record */,
@@ -643,11 +657,13 @@
 				4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
 				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
+				4C8681131E8EE79800776829 /* PlayButton.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,
+				4C8681151E8F003A00776829 /* CustomColors.swift in Sources */,
 				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

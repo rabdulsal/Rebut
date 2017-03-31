@@ -32,12 +32,11 @@ class RebuttalWaveFormCell : UICollectionViewCell {
     // IBActions
     @IBAction func pressedPlay(_ sender: Any) {
         if playButton.isSelected {
-            playButtonOff()
             viewModelDelegate?.shouldStopPlayingRebut()
         } else {
-            playButtonOn()
             viewModelDelegate?.shouldPlayRebut(rebut: self.rebut!, playDelegate: self)
         }
+        togglePlayButtonSelected()
     }
     
     @IBAction func pressedRespond(_ sender: Any) {
@@ -58,19 +57,19 @@ class RebuttalWaveFormCell : UICollectionViewCell {
 
 extension RebuttalWaveFormCell : RebutPlayerDelegate {
     func didFinishPlayingRebut(rebut: Rebut) {
-        playButtonOff()
+        togglePlayButtonSelected()
 //        viewModelDelegate?.shouldStopPlayingRebut() Don't need to call this?
     }
 }
 
 private extension RebuttalWaveFormCell {
     func playButtonOn() {
-        playButton.setTitle("Stop", for: .normal) // Eventually move to RebutPlayButton class
+        //playButton.setTitle("Stop", for: .normal) // Eventually move to RebutPlayButton class
         togglePlayButtonSelected()
     }
     
     func playButtonOff() {
-        playButton.setTitle("Play", for: .normal) // Eventually move to RebutPlayButton class
+        //playButton.setTitle("Play", for: .normal) // Eventually move to RebutPlayButton class
         togglePlayButtonSelected()
 
     }
