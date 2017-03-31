@@ -24,11 +24,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-BG-jPJ" customClass="FDWaveformView" customModule="FDWaveformView">
-                                <rect key="frame" x="16" y="28" width="343" height="272.5"/>
+                                <rect key="frame" x="16" y="28" width="343" height="273"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch8-Nd-o0i">
-                                <rect key="frame" x="16" y="308.5" width="343" height="50"/>
+                                <rect key="frame" x="16" y="309" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.52941176470588236" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="b9P-oS-qQi"/>
@@ -43,14 +43,14 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-0E-emp">
-                                <rect key="frame" x="16" y="389.5" width="343" height="228.5"/>
+                                <rect key="frame" x="16" y="390" width="343" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordControlsIdentifier" id="pvL-55-7Ox" customClass="RecordingTableViewCell" customModule="Rebut" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pvL-55-7Ox" id="RpX-7g-STp">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-PJ-afr">
@@ -122,11 +122,11 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQa-No-Ah9" id="lRl-Fk-iNn">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="151.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o6p-06-cp6">
-                                                    <rect key="frame" x="0.0" y="12" width="343" height="128"/>
+                                                    <rect key="frame" x="0.0" y="12" width="343" height="127"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UJG-KY-0lc">
                                                         <size key="itemSize" width="329" height="123"/>
@@ -147,7 +147,7 @@
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apw-ee-8cY">
-                                                                        <rect key="frame" x="114.5" y="36.5" width="100" height="50"/>
+                                                                        <rect key="frame" x="115" y="37" width="100" height="50"/>
                                                                         <color key="backgroundColor" red="0.52941176470588236" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="6hm-2J-lno"/>
@@ -179,7 +179,7 @@
                                                     </cells>
                                                 </collectionView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfa-kU-tV8">
-                                                    <rect key="frame" x="8" y="114.5" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="114" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

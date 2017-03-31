@@ -9,21 +9,16 @@
 import Foundation
 import UIKit
 
-protocol RebutPlayerDelegate{
-    func shouldPlayRebut(with rebut: Rebut)
-}
-
 class RebuttalTableViewCell : UITableViewCell {
-    @IBOutlet weak var scrollView: UIScrollView! // Will eventually replace as CollectionView
+    
     @IBOutlet weak var rebuttalCollectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var userName: UILabel!
+    
     var rebuts = [Rebut]()
     var viewModel: RebuttalViewModel!
     let module = RebuttalModule.shared
     let identifier = "waveformCell"
-    var playerDelegate: RebutPlayerDelegate?
     
     override func awakeFromNib() {
         rebuttalCollectionView.delegate = self
@@ -64,13 +59,31 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
         let rebut = rebuts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! RebuttalWaveFormCell
         cell.configureCell(with: rebut, delegate: self)
+        module.player = RebutPlayer(url: URL(fileURLWithPath: rebut.recordingFilePath))
         return cell
     }
 }
 
-extension RebuttalTableViewCell : PlayRebutDelegate {
-    func shouldPlayRebut(rebut: Rebut) {
+extension RebuttalTableViewCell : RebutViewModelDelegate {
+    func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
+        module.playerDelegate = playDelegate
         module.play(rebut: rebut)
+    }
+    
+    func rebutIsPlaying() -> Bool {
+        return module.player!.isPlaying()
+    }
+    
+    func shouldStopPlayingRebut() {
+        module.player?.stop()
+    }
+    
+    func shouldRespondToRebut(rebut: Rebut) {
+        // Initiate Response
+    }
+    
+    func shouldLikeRebut(rebut: Rebut) {
+        rebut.incrLike()
     }
 }
 

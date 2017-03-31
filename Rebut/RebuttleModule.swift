@@ -9,10 +9,6 @@
 import Foundation
 import RealmSwift
 
-protocol PlayRebutDelegate {
-    func shouldPlayRebut(rebut: Rebut)
-}
-
 class RebuttalModule {
     
     // --- Manages creation of Posts, Rebuts, etc & updating of related Models
@@ -27,8 +23,13 @@ class RebuttalModule {
     var rebuttal: Rebuttal?
     var responses = [Rebut]()
     var allRebuttals = [Rebuttal]()
-    var player = RebutPlayer()
-    
+    var player: RebutPlayer? {
+        didSet {
+            player?.playerDelegate = self
+        }
+    }
+    var rebutToPlay: Rebut?
+    var playerDelegate: RebutPlayerDelegate?
     // Realm stuff
     let realm = try! Realm()
     var allRealmRebuts: Results<Rebut> {
@@ -46,7 +47,15 @@ class RebuttalModule {
      */
     
     func play(rebut: Rebut) {
-        player.play(rebut: rebut)
+        // Will probably need to
+//        player?.play(rebut: rebut)
+        self.player = RebutPlayer(url: URL(fileURLWithPath: rebut.recordingFilePath))
+        self.rebutToPlay = rebut
+        self.togglePlayer()
+    }
+    
+    func stop() {
+        player?.stop()
     }
     
     func updateAllRebuts(with recordingFile: String) {
@@ -92,6 +101,15 @@ class RebuttalModule {
     }
 }
 
+extension RebuttalModule : RebutPlayerDelegate {
+    func didFinishPlayingRebut(rebut: Rebut) {
+        playerDelegate?.didFinishPlayingRebut(rebut: rebut)
+        // Include logic to recursively check if Rebut has a response, and continue auto-playing all responses until done
+    }
+}
+
 private extension RebuttalModule {
-    
+    func togglePlayer() {
+        (player?.isPlaying())! ? player?.stop() : player?.play(rebut: self.rebutToPlay!)
+    }
 }
