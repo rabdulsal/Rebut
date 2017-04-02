@@ -62,6 +62,12 @@ extension RebuttalWaveFormCell : RebutPlayerDelegate {
     }
 }
 
+extension RebuttalWaveFormCell : RebutAutoPlayDelegate {
+    func shouldPressRebutPlayButton() {
+        self.pressedPlay(self)
+    }
+}
+
 private extension RebuttalWaveFormCell {
     func playButtonOn() {
         //playButton.setTitle("Stop", for: .normal) // Eventually move to RebutPlayButton class

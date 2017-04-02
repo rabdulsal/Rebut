@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol RebutAutoPlayDelegate {
+    func shouldPressRebutPlayButton()
+}
+
 class RebuttalTableViewCell : UITableViewCell {
     
     @IBOutlet weak var rebuttalCollectionView: UICollectionView!
@@ -19,6 +23,10 @@ class RebuttalTableViewCell : UITableViewCell {
     var viewModel: RebuttalViewModel!
     let module = RebuttalModule.shared
     let identifier = "waveformCell"
+    var autoPlayDelegate: RebutAutoPlayDelegate?
+    var playerDelegate: RebutPlayerDelegate?
+    var waveFormCellDelegate: RebutViewModelDelegate?
+    var currentVisibleIndexPath: IndexPath?
     
     override func awakeFromNib() {
         rebuttalCollectionView.delegate = self
@@ -59,14 +67,15 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
         let rebut = rebuts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! RebuttalWaveFormCell
         cell.configureCell(with: rebut, delegate: self)
-        module.player = RebutPlayer(url: URL(fileURLWithPath: rebut.recordingFilePath))
+        module.player = RebutPlayer(url: URL(fileURLWithPath: (rebut.recordingFilePath)))
         return cell
     }
 }
 
 extension RebuttalTableViewCell : RebutViewModelDelegate {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
-        module.playerDelegate = playDelegate
+        self.playerDelegate = playDelegate
+        module.playerDelegate = self
         module.play(rebut: rebut)
     }
     
@@ -84,6 +93,69 @@ extension RebuttalTableViewCell : RebutViewModelDelegate {
     
     func shouldLikeRebut(rebut: Rebut) {
         rebut.incrLike()
+    }
+}
+
+extension RebuttalTableViewCell : RebutPlayerDelegate {
+    func didFinishPlayingRebut(rebut: Rebut) {
+        // Fire playerDelegate
+//
+//        let nextRebut = rebuts[nextIndex]
+        playerDelegate?.didFinishPlayingRebut(rebut: rebut)
+//        let cell = rebuttalCollectionView.visibleCells.first as! RebuttalWaveFormCell
+        removeCellDelegate(for: rebut)
+        autoScroll()
+        // Crashes if cell not visible
+//        cell.viewModelDelegate?.shouldPlayRebut(rebut: nextRebut, playDelegate: cell)
+        //module.play(rebut: nextRebut)
+    }
+}
+
+extension RebuttalTableViewCell : UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        // Fires on manaual scroll
+        // Must get cell and set as delegate
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        // Fires on auto-scroll
+        print("Visible Index:",currentVisibleIndexPath!.row)
+        let cell = rebuttalCollectionView.cellForItem(at: currentVisibleIndexPath!) as! RebuttalWaveFormCell
+        self.autoPlayDelegate = cell
+        cell.viewModelDelegate = self
+        autoPlayDelegate?.shouldPressRebutPlayButton()
+//        cell.viewModelDelegate?.shouldPlayRebut(rebut: nextRebut, playDelegate: cell)
+    }
+}
+
+fileprivate extension RebuttalTableViewCell {
+    func autoScroll() {
+        let nextIndex = (rebuttalCollectionView.indexPathsForVisibleItems.first?.row)! + 1
+        if nextRebutExists(nextIndex: nextIndex) {
+//            self.rebuttalCollectionView.setContentOffset(CGPoint(x:CGFloat(Int(self.rebuttalCollectionView.frame.width)*nextIndex),y:0), animated: true)
+//            UIView.animate(withDuration: 0.4, animations: {
+//                self.rebuttalCollectionView.contentOffset = CGPoint(x:CGFloat(Int(self.rebuttalCollectionView.frame.width)*nextIndex),y:0)
+//            })
+            let indexPath = IndexPath(row: nextIndex, section: 0)
+            rebuttalCollectionView.scrollToItem(at: indexPath, at: .right, animated: true)
+            currentVisibleIndexPath = indexPath
+        }
+        
+    }
+    
+    func nextRebutExists(nextIndex: Int) -> Bool {
+        return rebuts.indices.contains(nextIndex)
+    }
+    
+    func cellForRebut(rebut: Rebut) -> RebuttalWaveFormCell {
+        let index = rebuts.index(of: rebut)
+        let indexPath = IndexPath(item: index!, section: 0)
+        return rebuttalCollectionView.cellForItem(at: indexPath) as! RebuttalWaveFormCell
+    }
+    
+    func removeCellDelegate(for rebut: Rebut) {
+        let cell = cellForRebut(rebut: rebut)
+        cell.viewModelDelegate = nil
     }
 }
 
