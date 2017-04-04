@@ -111,6 +111,8 @@ extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
         rebutModule.updateAllRebuts(with: filePath)
         controller.dismiss(animated: true) { 
             self.recordingsTableView.reloadData()
+            
+            // TODO: In actual implementation will dismiss to a PostViewController
         }
     }
     

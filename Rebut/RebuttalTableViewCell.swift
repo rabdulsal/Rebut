@@ -115,14 +115,19 @@ extension RebuttalTableViewCell : UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         // Fires on manaual scroll
         // Must get cell and set as delegate
+        let currentCell = getCurrentVisibleCell()
+        currentVisibleIndexPath = rebuttalCollectionView.indexPath(for: currentCell)
+        let nextIndex = rebuttalCollectionView.indexPathsForVisibleItems.first!.row
+        print("Visible index currentVis:",currentVisibleIndexPath!.row)
+        print("Visible index visIndexPaths:",nextIndex)
+        self.setAutoPlayAndViewModelDelegates(for: currentCell)
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         // Fires on auto-scroll
         print("Visible Index:",currentVisibleIndexPath!.row)
         let cell = rebuttalCollectionView.cellForItem(at: currentVisibleIndexPath!) as! RebuttalWaveFormCell
-        self.autoPlayDelegate = cell
-        cell.viewModelDelegate = self
+        self.setAutoPlayAndViewModelDelegates(for: cell)
         autoPlayDelegate?.shouldPressRebutPlayButton()
 //        cell.viewModelDelegate?.shouldPlayRebut(rebut: nextRebut, playDelegate: cell)
     }
@@ -156,6 +161,15 @@ fileprivate extension RebuttalTableViewCell {
     func removeCellDelegate(for rebut: Rebut) {
         let cell = cellForRebut(rebut: rebut)
         cell.viewModelDelegate = nil
+    }
+    
+    func getCurrentVisibleCell() -> RebuttalWaveFormCell {
+        return rebuttalCollectionView.visibleCells.first as! RebuttalWaveFormCell
+    }
+    
+    func setAutoPlayAndViewModelDelegates(for cell: RebuttalWaveFormCell) {
+        self.autoPlayDelegate = cell
+        cell.viewModelDelegate = self
     }
 }
 

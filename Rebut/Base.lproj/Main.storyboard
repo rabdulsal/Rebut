@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncN-38-b27" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="-321"/>
+            <point key="canvasLocation" x="1449" y="-321"/>
         </scene>
         <!--Rebut Record View Controller-->
         <scene sceneID="DMu-F6-duX">
@@ -362,6 +362,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ee-35-UqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2105" y="-322"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="cU5-m2-x3s">
+            <objects>
+                <viewController id="lnq-fK-Ibv" customClass="PostViewController" customModule="Rebut" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xiq-R2-PAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="qAj-Hg-wHI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WUi-1Z-k4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf1-YV-vkf" customClass="FDWaveformView" customModule="FDWaveformView">
+                                <rect key="frame" x="16" y="28" width="343" height="273"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="273" id="Qk8-bY-wJQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5z-oi-cK4" userLabel="Post Btn">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.52941176469999995" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3rp-Ql-zVx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedPostButton:" destination="lnq-fK-Ibv" eventType="touchUpInside" id="y5k-4C-zw8"/>
+                                    <action selector="start" destination="Ekp-LJ-mfL" eventType="touchUpInside" id="HSL-NP-xX3"/>
+                                    <action selector="start" destination="lnq-fK-Ibv" eventType="touchUpInside" id="miy-Vj-vTb"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jLI-j9-MgK">
+                                <rect key="frame" x="16" y="309" width="343" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qAj-Hg-wHI" firstAttribute="top" secondItem="b5z-oi-cK4" secondAttribute="bottom" id="49E-MC-gCI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bf1-YV-vkf" secondAttribute="leading" id="4uk-21-hvV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jLI-j9-MgK" secondAttribute="leading" id="AR7-T9-0Bt"/>
+                            <constraint firstItem="bf1-YV-vkf" firstAttribute="top" secondItem="xiq-R2-PAz" secondAttribute="bottom" constant="8" id="D71-OI-g7G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jLI-j9-MgK" secondAttribute="trailing" id="P72-lI-1C0"/>
+                            <constraint firstAttribute="trailing" secondItem="b5z-oi-cK4" secondAttribute="trailing" id="Z2U-Lo-0s7"/>
+                            <constraint firstItem="jLI-j9-MgK" firstAttribute="centerX" secondItem="WUi-1Z-k4c" secondAttribute="centerX" id="meq-5w-FZz"/>
+                            <constraint firstItem="jLI-j9-MgK" firstAttribute="top" secondItem="bf1-YV-vkf" secondAttribute="bottom" constant="8" id="oVN-Z8-Sf0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bf1-YV-vkf" secondAttribute="trailing" id="ruP-If-dud"/>
+                            <constraint firstItem="b5z-oi-cK4" firstAttribute="leading" secondItem="WUi-1Z-k4c" secondAttribute="leading" id="sKm-qV-xum"/>
+                            <constraint firstItem="qAj-Hg-wHI" firstAttribute="top" secondItem="jLI-j9-MgK" secondAttribute="bottom" constant="78" id="wnu-ah-ek8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="SOG-LE-34a"/>
+                    <connections>
+                        <outlet property="recordingWaveForm" destination="bf1-YV-vkf" id="C7H-DV-Ou9"/>
+                        <outlet property="startBtn" destination="b5z-oi-cK4" id="fzR-QB-bg1"/>
+                        <outlet property="textView" destination="jLI-j9-MgK" id="kG4-fX-Pqm"/>
+                        <outlet property="waveFormView" destination="bf1-YV-vkf" id="9xq-bV-efU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Cm-On-R94" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1448.8" y="358.4707646176912"/>
         </scene>
     </scenes>
     <resources>

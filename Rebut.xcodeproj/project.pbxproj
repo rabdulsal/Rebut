@@ -17,6 +17,7 @@
 		4C8681131E8EE79800776829 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681121E8EE79800776829 /* PlayButton.swift */; };
 		4C8681151E8F003A00776829 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681141E8F003A00776829 /* CustomColors.swift */; };
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
+		4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		4C8681121E8EE79800776829 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		4C8681141E8F003A00776829 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
+		4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleViewModel.swift; path = Rebut/RebuttleViewModel.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
 				4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */,
+				4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */,
 				4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */,
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
+				4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */,
 				4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
 				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
