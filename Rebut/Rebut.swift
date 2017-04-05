@@ -28,9 +28,10 @@ class Rebut : Object {
     // Ignored Properties
     var recording: Recording?
     var rebutType: RebutType = .rebut
+    var allComments = [Comment]()
     
     override static func ignoredProperties() -> [String] {
-        return ["recording","waveFormView","rebutType"]
+        return ["recording","waveFormView","rebutType","allComments"]
     }
     
     func makeDataWithPath(filePath: String) {

@@ -13,6 +13,7 @@
 		4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906531E7B246E003DDCC5 /* Commenter.swift */; };
 		4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906551E7B3E4E003DDCC5 /* Source.swift */; };
 		4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */; };
+		4C4A8C2A1E94009000C972F5 /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A8C291E94009000C972F5 /* CommentManager.swift */; };
 		4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6054C71E8D5B800006514E /* RebutPlayer.swift */; };
 		4C8681131E8EE79800776829 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681121E8EE79800776829 /* PlayButton.swift */; };
 		4C8681151E8F003A00776829 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681141E8F003A00776829 /* CustomColors.swift */; };
@@ -40,7 +41,7 @@
 		4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */; };
 		4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650371E84BE1F0026143C /* RebuttleModule.swift */; };
 		4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650451E86E5F50026143C /* Object+Extension.swift */; };
-		4CE650481E88B5B40026143C /* RebuttleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650471E88B5B40026143C /* RebuttleDetailViewController.swift */; };
+		4CE650481E88B5B40026143C /* RebuttalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */; };
 		6BFDE14D8D347B022A0C26AE /* Pods_RebutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A22724A51D03F5E9D713D94 /* Pods_RebutUITests.framework */; };
 		EEE21B8585E2591F69515613 /* Pods_RebutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE86D62B67206F886133398 /* Pods_RebutTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		4C1906531E7B246E003DDCC5 /* Commenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commenter.swift; sourceTree = "<group>"; };
 		4C1906551E7B3E4E003DDCC5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalTableViewCell.swift; sourceTree = "<group>"; };
+		4C4A8C291E94009000C972F5 /* CommentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
 		4C6054C71E8D5B800006514E /* RebutPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayer.swift; sourceTree = "<group>"; };
 		4C8681121E8EE79800776829 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		4C8681141E8F003A00776829 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 		4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
 		4CE650371E84BE1F0026143C /* RebuttleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleModule.swift; path = Rebut/RebuttleModule.swift; sourceTree = "<group>"; };
 		4CE650451E86E5F50026143C /* Object+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object+Extension.swift"; sourceTree = "<group>"; };
-		4CE650471E88B5B40026143C /* RebuttleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttleDetailViewController.swift; sourceTree = "<group>"; };
+		4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalDetailViewController.swift; sourceTree = "<group>"; };
 		4DF486554AA1466250700346 /* Pods-RebutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RebutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RebutTests/Pods-RebutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		943F65BDAFADFC29B7F5B778 /* Pods-Rebut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.release.xcconfig"; sourceTree = "<group>"; };
 		9DF0B5B857BD5A7222FE3C65 /* Pods-Rebut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
-				4CE650471E88B5B40026143C /* RebuttleDetailViewController.swift */,
+				4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +342,7 @@
 				4CE650371E84BE1F0026143C /* RebuttleModule.swift */,
 				4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */,
 				4C6054C71E8D5B800006514E /* RebutPlayer.swift */,
+				4C4A8C291E94009000C972F5 /* CommentManager.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -643,7 +646,7 @@
 			files = (
 				4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */,
 				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
-				4CE650481E88B5B40026143C /* RebuttleDetailViewController.swift in Sources */,
+				4CE650481E88B5B40026143C /* RebuttalDetailViewController.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
@@ -660,6 +663,7 @@
 				4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */,
 				4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
+				4C4A8C2A1E94009000C972F5 /* CommentManager.swift in Sources */,
 				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
 				4C8681131E8EE79800776829 /* PlayButton.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
