@@ -19,6 +19,8 @@
 		4C8681151E8F003A00776829 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681141E8F003A00776829 /* CustomColors.swift */; };
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
 		4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */; };
+		4CA31BC61E94866800EF4D0E /* RebuttalCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */; };
+		4CA31BC81E94A69E00EF4D0E /* RebuttalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
@@ -91,6 +93,8 @@
 		4C8681141E8F003A00776829 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
 		4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RebuttalCard.xib; sourceTree = "<group>"; };
+		4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalCard.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleViewModel.swift; path = Rebut/RebuttleViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +183,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		4CA31BC41E9484AD00EF4D0E /* XiBs */ = {
+			isa = PBXGroup;
+			children = (
+				4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */,
+				4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */,
+			);
+			name = XiBs;
+			sourceTree = "<group>";
+		};
 		4CA3AF401E7F0D2B006BE3F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 		4CA3AF571E80E4B9006BE3F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CA31BC41E9484AD00EF4D0E /* XiBs */,
 				4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */,
 				4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */,
 			);
@@ -481,6 +495,7 @@
 			files = (
 				4CBC60641E7A2D42005C26D4 /* LaunchScreen.storyboard in Resources */,
 				4CBC60611E7A2D42005C26D4 /* Assets.xcassets in Resources */,
+				4CA31BC61E94866800EF4D0E /* RebuttalCard.xib in Resources */,
 				4CBC605F1E7A2D42005C26D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +683,7 @@
 				4C8681131E8EE79800776829 /* PlayButton.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */,
+				4CA31BC81E94A69E00EF4D0E /* RebuttalCard.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,
