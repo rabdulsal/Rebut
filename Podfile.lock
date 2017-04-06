@@ -8,11 +8,13 @@ PODS:
   - RealmSwift (2.4.4):
     - Realm (= 2.4.4)
   - SCSiriWaveformView (1.0.3)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - FDWaveformView
   - IQAudioRecorderController
   - RealmSwift
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   FDWaveformView: 13d70f4d8c536393427c8b4c9e846bf0bcfd16c7
@@ -20,7 +22,8 @@ SPEC CHECKSUMS:
   Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
   RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
   SCSiriWaveformView: b8b2756af42addcd31900c3945f24edafefb5395
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: b66a5b63ecb5129947083e1c9e4e7a07fd457946
+PODFILE CHECKSUM: 8f13b4e7ffd8ba64b8469c9ece57e51d492a5383
 
 COCOAPODS: 1.2.0

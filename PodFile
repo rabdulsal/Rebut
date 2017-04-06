@@ -9,6 +9,7 @@ target 'Rebut' do
   pod 'IQAudioRecorderController'
   pod 'FDWaveformView'
   pod 'RealmSwift'
+  pod 'SVProgressHUD'
 
   target 'RebutTests' do
     inherit! :search_paths

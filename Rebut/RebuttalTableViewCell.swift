@@ -15,9 +15,10 @@ protocol RebutAutoPlayDelegate {
 
 class RebuttalTableViewCell : UITableViewCell {
     
-    @IBOutlet weak var rebuttalCollectionView: UICollectionView!
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var rebuttalCollectionView: UICollectionView! // Moving to RebuttalCard
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout! // Moving to RebuttalCard
+    @IBOutlet weak var titleLabel: UILabel! // Moving to RebuttalCard
+    @IBOutlet weak var rebuttalCard: RebuttalCard!
     
     var rebuts = [Rebut]()
     var viewModel: RebuttalViewModel!
@@ -49,6 +50,8 @@ class RebuttalTableViewCell : UITableViewCell {
     }
 }
 
+//MARK: ----- Move to RebuttalCard class Begin
+
 extension RebuttalTableViewCell : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Get the url & play audio
@@ -71,6 +74,8 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
         return cell
     }
 }
+
+//MARK: ----- Move to RebuttalCard class End
 
 extension RebuttalTableViewCell : RebutViewModelDelegate {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
@@ -110,6 +115,8 @@ extension RebuttalTableViewCell : RebutPlayerDelegate {
         //module.play(rebut: nextRebut)
     }
 }
+
+//MARK: ----- Move to RebuttalCard class Begin
 
 extension RebuttalTableViewCell : UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

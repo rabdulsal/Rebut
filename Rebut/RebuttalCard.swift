@@ -23,7 +23,7 @@ class RebuttalCard : UIView {
     @IBOutlet weak var totalDownvotesLabel: UILabel!
     var rebuttal: Rebuttal?
     
-    override init(frame: CGRect, rebuttal: Rebuttal) {
+    init(frame: CGRect, rebuttal: Rebuttal) {
         self.rebuttal = rebuttal
         super.init(frame: frame)
     }
