@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +50,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pvL-55-7Ox" id="RpX-7g-STp">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-PJ-afr">
@@ -122,7 +122,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQa-No-Ah9" id="lRl-Fk-iNn">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="151"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="152"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o6p-06-cp6">
@@ -146,6 +146,13 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="123"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </view>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShP-Je-dhl">
+                                                                        <rect key="frame" x="-0.5" y="-0.5" width="329" height="123"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="pressedRebutCell:" destination="RNG-yw-WdR" eventType="touchUpInside" id="RZL-bo-QHv"/>
+                                                                        </connections>
+                                                                    </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apw-ee-8cY" customClass="PlayButton" customModule="Rebut" customModuleProvider="target">
                                                                         <rect key="frame" x="115" y="37" width="100" height="50"/>
                                                                         <color key="backgroundColor" red="0.52941176470588236" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,11 +171,15 @@
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
+                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="height" secondItem="raY-1t-psX" secondAttribute="height" id="17T-2k-STR"/>
+                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="centerX" secondItem="raY-1t-psX" secondAttribute="centerX" id="1oN-zP-aLP"/>
                                                                 <constraint firstItem="apw-ee-8cY" firstAttribute="centerY" secondItem="raY-1t-psX" secondAttribute="centerY" id="8Pg-hf-N43"/>
                                                                 <constraint firstAttribute="bottomMargin" secondItem="raY-1t-psX" secondAttribute="bottom" constant="-8" id="919-4E-ZqB"/>
+                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="width" secondItem="raY-1t-psX" secondAttribute="width" id="EBq-0q-hrj"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="raY-1t-psX" secondAttribute="trailing" constant="-8" id="ROg-Ud-t7H"/>
                                                                 <constraint firstItem="apw-ee-8cY" firstAttribute="centerX" secondItem="raY-1t-psX" secondAttribute="centerX" id="djG-7m-0Kb"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="leading" secondItem="RNG-yw-WdR" secondAttribute="leadingMargin" constant="-8" id="mYb-Jv-Umb"/>
+                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="centerY" secondItem="raY-1t-psX" secondAttribute="centerY" id="uEu-iS-xow"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="top" secondItem="RNG-yw-WdR" secondAttribute="topMargin" constant="-8" id="w4p-BA-U6O"/>
                                                             </constraints>
                                                             <connections>
@@ -233,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Rebuttal Detail View Controller-->
         <scene sceneID="L7L-oS-Pjp">
             <objects>
-                <viewController id="Ekp-LJ-mfL" customClass="ViewController" customModule="Rebut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ekp-LJ-mfL" customClass="RebuttalDetailViewController" customModule="Rebut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ot-id-zcu"/>
                         <viewControllerLayoutGuide type="bottom" id="Xmf-Do-FrR"/>
@@ -245,6 +256,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OYh-CY-pHa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="230" id="u66-JO-mmU" userLabel="RebutViewCell" customClass="RebutDetailCell" customModule="Rebut" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u66-JO-mmU" id="U8o-au-OF8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taf-Ll-A1c" customClass="RebutDetailCard" customModule="Rebut" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="359" height="214"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="taf-Ll-A1c" secondAttribute="leading" id="8Dd-qB-BUa"/>
+                                                <constraint firstAttribute="topMargin" secondItem="taf-Ll-A1c" secondAttribute="top" id="eQi-0L-JyJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="taf-Ll-A1c" secondAttribute="trailing" id="mXc-6h-iSm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="taf-Ll-A1c" secondAttribute="bottom" constant="-0.5" id="x9i-Bv-6oK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rebutDetailView" destination="taf-Ll-A1c" id="vpc-HE-hAY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="241" id="8Ky-vF-Bcy" userLabel="CommentsViewCell">
+                                        <rect key="frame" x="0.0" y="258" width="375" height="241"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ky-vF-Bcy" id="mID-ee-Ma3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOH-xm-uhJ">
                                 <rect key="frame" x="171" y="319" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
@@ -260,12 +308,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.65490196079999996" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Pef-ij-gw5" firstAttribute="top" secondItem="nOH-xm-uhJ" secondAttribute="bottom" constant="22" id="1ur-Nh-BEE"/>
+                            <constraint firstItem="OYh-CY-pHa" firstAttribute="centerX" secondItem="66T-qX-nGB" secondAttribute="centerX" id="4Uu-1v-67a"/>
                             <constraint firstItem="nOH-xm-uhJ" firstAttribute="centerY" secondItem="66T-qX-nGB" secondAttribute="centerY" id="53c-fl-RpN"/>
+                            <constraint firstItem="Xmf-Do-FrR" firstAttribute="top" secondItem="OYh-CY-pHa" secondAttribute="bottom" id="Dwe-TO-MlQ"/>
                             <constraint firstItem="nOH-xm-uhJ" firstAttribute="centerX" secondItem="66T-qX-nGB" secondAttribute="centerX" id="PMz-cW-mFH"/>
+                            <constraint firstItem="OYh-CY-pHa" firstAttribute="leading" secondItem="66T-qX-nGB" secondAttribute="leadingMargin" constant="-16" id="SEA-0o-zLs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OYh-CY-pHa" secondAttribute="trailing" constant="-16" id="cGw-41-mNm"/>
                             <constraint firstItem="Pef-ij-gw5" firstAttribute="width" secondItem="nOH-xm-uhJ" secondAttribute="width" id="iP1-MU-zC0"/>
+                            <constraint firstItem="OYh-CY-pHa" firstAttribute="centerY" secondItem="66T-qX-nGB" secondAttribute="centerY" id="jHw-nG-ups"/>
+                            <constraint firstItem="OYh-CY-pHa" firstAttribute="top" secondItem="7Ot-id-zcu" secondAttribute="bottom" constant="-20" id="o7m-u9-WsZ"/>
                             <constraint firstItem="Pef-ij-gw5" firstAttribute="centerX" secondItem="66T-qX-nGB" secondAttribute="centerX" id="vXY-F0-dBs"/>
                         </constraints>
                     </view>
@@ -275,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncN-38-b27" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="-321"/>
+            <point key="canvasLocation" x="1448.8" y="-321.58920539730138"/>
         </scene>
         <!--Rebut Record View Controller-->
         <scene sceneID="DMu-F6-duX">

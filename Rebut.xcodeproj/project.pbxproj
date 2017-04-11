@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		081E8EFDBD11F26059EEB04B /* Pods_Rebut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96A1763B022BBDD7ECD215 /* Pods_Rebut.framework */; };
+		4C04CF2C1E9C84AD0033FF5B /* RebutDetailPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04CF2B1E9C84AD0033FF5B /* RebutDetailPlayerManager.swift */; };
+		4C04CF2E1E9C8E350033FF5B /* RebutDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C04CF2D1E9C8E350033FF5B /* RebutDetailCell.swift */; };
 		4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19064F1E7B225C003DDCC5 /* Rebutter.swift */; };
 		4C1906521E7B241B003DDCC5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906511E7B241B003DDCC5 /* User.swift */; };
 		4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1906531E7B246E003DDCC5 /* Commenter.swift */; };
@@ -19,8 +21,8 @@
 		4C8681151E8F003A00776829 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8681141E8F003A00776829 /* CustomColors.swift */; };
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
 		4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */; };
-		4CA31BC61E94866800EF4D0E /* RebuttalCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */; };
-		4CA31BC81E94A69E00EF4D0E /* RebuttalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */; };
+		4CA31BC61E94866800EF4D0E /* RebutDetailCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */; };
+		4CA31BC81E94A69E00EF4D0E /* RebutDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
@@ -82,6 +84,8 @@
 		050939DF24F1E71FBC377296 /* Pods-RebutUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RebutUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RebutUITests/Pods-RebutUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30397E5ECE238FD07510D4E9 /* Pods-RebutUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RebutUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RebutUITests/Pods-RebutUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A22724A51D03F5E9D713D94 /* Pods_RebutUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RebutUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C04CF2B1E9C84AD0033FF5B /* RebutDetailPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutDetailPlayerManager.swift; sourceTree = "<group>"; };
+		4C04CF2D1E9C8E350033FF5B /* RebutDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutDetailCell.swift; sourceTree = "<group>"; };
 		4C19064F1E7B225C003DDCC5 /* Rebutter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebutter.swift; sourceTree = "<group>"; };
 		4C1906511E7B241B003DDCC5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4C1906531E7B246E003DDCC5 /* Commenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commenter.swift; sourceTree = "<group>"; };
@@ -93,8 +97,8 @@
 		4C8681141E8F003A00776829 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
 		4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RebuttalCard.xib; sourceTree = "<group>"; };
-		4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalCard.swift; sourceTree = "<group>"; };
+		4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RebutDetailCard.xib; sourceTree = "<group>"; };
+		4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutDetailCard.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleViewModel.swift; path = Rebut/RebuttleViewModel.swift; sourceTree = "<group>"; };
@@ -186,8 +190,8 @@
 		4CA31BC41E9484AD00EF4D0E /* XiBs */ = {
 			isa = PBXGroup;
 			children = (
-				4CA31BC51E94866800EF4D0E /* RebuttalCard.xib */,
-				4CA31BC71E94A69E00EF4D0E /* RebuttalCard.swift */,
+				4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */,
+				4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */,
 			);
 			name = XiBs;
 			sourceTree = "<group>";
@@ -206,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */,
+				4C04CF2B1E9C84AD0033FF5B /* RebutDetailPlayerManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				4CA31BC41E9484AD00EF4D0E /* XiBs */,
 				4C269B241E897AA0007B9DFE /* RebuttalTableViewCell.swift */,
 				4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */,
+				4C04CF2D1E9C8E350033FF5B /* RebutDetailCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -495,7 +501,7 @@
 			files = (
 				4CBC60641E7A2D42005C26D4 /* LaunchScreen.storyboard in Resources */,
 				4CBC60611E7A2D42005C26D4 /* Assets.xcassets in Resources */,
-				4CA31BC61E94866800EF4D0E /* RebuttalCard.xib in Resources */,
+				4CA31BC61E94866800EF4D0E /* RebutDetailCard.xib in Resources */,
 				4CBC605F1E7A2D42005C26D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +670,7 @@
 				4CE650481E88B5B40026143C /* RebuttalDetailViewController.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
+				4C04CF2E1E9C8E350033FF5B /* RebutDetailCell.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
 				4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */,
 				4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */,
@@ -671,6 +678,7 @@
 				4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */,
 				4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */,
 				4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */,
+				4C04CF2C1E9C84AD0033FF5B /* RebutDetailPlayerManager.swift in Sources */,
 				4C1906501E7B225C003DDCC5 /* Rebutter.swift in Sources */,
 				4CBC60951E7A6B02005C26D4 /* Audio.swift in Sources */,
 				4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */,
@@ -683,7 +691,7 @@
 				4C8681131E8EE79800776829 /* PlayButton.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */,
-				4CA31BC81E94A69E00EF4D0E /* RebuttalCard.swift in Sources */,
+				4CA31BC81E94A69E00EF4D0E /* RebutDetailCard.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,

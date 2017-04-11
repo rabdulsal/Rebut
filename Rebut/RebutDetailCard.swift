@@ -1,5 +1,5 @@
 //
-//  RebuttalCard.swift
+//  RebutDetailCard.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 4/4/17.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FDWaveformView
 
-class RebuttalCard : UIView {
+class RebutDetailCard : UIView {
     
     @IBOutlet weak var rebutterProfilesCollectionView: UICollectionView!
     @IBOutlet weak var waveFormView: FDWaveformView!
@@ -23,7 +23,7 @@ class RebuttalCard : UIView {
     @IBOutlet weak var totalDownvotesLabel: UILabel!
     var rebuttal: Rebuttal?
     
-    override init(frame: CGRect, rebuttal: Rebuttal) {
+    init(frame: CGRect, rebuttal: Rebuttal) {
         self.rebuttal = rebuttal
         super.init(frame: frame)
     }
@@ -43,7 +43,7 @@ class RebuttalCard : UIView {
     }
 }
 
-private extension RebuttalCard {
+private extension RebutDetailCard {
     func setupView() {
         
     }

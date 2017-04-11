@@ -47,6 +47,11 @@ class RebuttalWaveFormCell : UICollectionViewCell {
         viewModelDelegate?.shouldLikeRebut(rebut: self.rebut!)
     }
     
+    @IBAction func pressedRebutCell(_ sender: Any) {
+        // Push to DetailVC
+    }
+    
+    
     func configureCell(with rebut: Rebut, delegate: RebutViewModelDelegate) {
         self.rebut = rebut
         self.viewModelDelegate = delegate
