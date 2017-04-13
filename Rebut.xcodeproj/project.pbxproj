@@ -22,9 +22,8 @@
 		4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */; };
 		4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */; };
 		4CA31BC61E94866800EF4D0E /* RebutDetailCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */; };
-		4CA31BC81E94A69E00EF4D0E /* RebutDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
-		4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */; };
+		4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
 		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
@@ -43,9 +42,9 @@
 		4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */; };
 		4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145B1E7E19A300CAFCA1 /* Value.swift */; };
 		4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */; };
-		4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650371E84BE1F0026143C /* RebuttleModule.swift */; };
+		4CE650381E84BE1F0026143C /* RebuttalModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650371E84BE1F0026143C /* RebuttalModule.swift */; };
 		4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650451E86E5F50026143C /* Object+Extension.swift */; };
-		4CE650481E88B5B40026143C /* RebuttalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */; };
+		4CE650481E88B5B40026143C /* RebutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE650471E88B5B40026143C /* RebutDetailViewController.swift */; };
 		6BFDE14D8D347B022A0C26AE /* Pods_RebutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A22724A51D03F5E9D713D94 /* Pods_RebutUITests.framework */; };
 		EEE21B8585E2591F69515613 /* Pods_RebutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE86D62B67206F886133398 /* Pods_RebutTests.framework */; };
 /* End PBXBuildFile section */
@@ -98,10 +97,9 @@
 		4CA31BC01E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalWaveFormCell.swift; sourceTree = "<group>"; };
 		4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RebutDetailCard.xib; sourceTree = "<group>"; };
-		4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutDetailCard.swift; sourceTree = "<group>"; };
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
-		4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleViewModel.swift; path = Rebut/RebuttleViewModel.swift; sourceTree = "<group>"; };
+		4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttalViewModel.swift; path = Rebut/RebuttalViewModel.swift; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
@@ -126,9 +124,9 @@
 		4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordControlsViewController.swift; sourceTree = "<group>"; };
 		4CCE145B1E7E19A300CAFCA1 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		4CCE145F1E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
-		4CE650371E84BE1F0026143C /* RebuttleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttleModule.swift; path = Rebut/RebuttleModule.swift; sourceTree = "<group>"; };
+		4CE650371E84BE1F0026143C /* RebuttalModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttalModule.swift; path = Rebut/RebuttalModule.swift; sourceTree = "<group>"; };
 		4CE650451E86E5F50026143C /* Object+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Object+Extension.swift"; sourceTree = "<group>"; };
-		4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebuttalDetailViewController.swift; sourceTree = "<group>"; };
+		4CE650471E88B5B40026143C /* RebutDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutDetailViewController.swift; sourceTree = "<group>"; };
 		4DF486554AA1466250700346 /* Pods-RebutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RebutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RebutTests/Pods-RebutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		943F65BDAFADFC29B7F5B778 /* Pods-Rebut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.release.xcconfig"; sourceTree = "<group>"; };
 		9DF0B5B857BD5A7222FE3C65 /* Pods-Rebut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rebut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rebut/Pods-Rebut.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */,
-				4CA31BC71E94A69E00EF4D0E /* RebutDetailCard.swift */,
 			);
 			name = XiBs;
 			sourceTree = "<group>";
@@ -230,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
-				4CE650471E88B5B40026143C /* RebuttalDetailViewController.swift */,
+				4CE650471E88B5B40026143C /* RebutDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,8 +356,8 @@
 		4CE650401E861BEE0026143C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4CE650371E84BE1F0026143C /* RebuttleModule.swift */,
-				4CA3AF5B1E82133B006BE3F0 /* RebuttleViewModel.swift */,
+				4CE650371E84BE1F0026143C /* RebuttalModule.swift */,
+				4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */,
 				4C6054C71E8D5B800006514E /* RebutPlayer.swift */,
 				4C4A8C291E94009000C972F5 /* CommentManager.swift */,
 			);
@@ -667,12 +664,12 @@
 			files = (
 				4CBC609E1E7B8B16005C26D4 /* RecordControlsViewController.swift in Sources */,
 				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
-				4CE650481E88B5B40026143C /* RebuttalDetailViewController.swift in Sources */,
+				4CE650481E88B5B40026143C /* RebutDetailViewController.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4C04CF2E1E9C8E350033FF5B /* RebutDetailCell.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
-				4CA3AF5C1E82133B006BE3F0 /* RebuttleViewModel.swift in Sources */,
+				4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */,
 				4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */,
 				4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */,
 				4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */,
@@ -684,14 +681,13 @@
 				4CBC608F1E7A4D5C005C26D4 /* Comment.swift in Sources */,
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
 				4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */,
-				4CE650381E84BE1F0026143C /* RebuttleModule.swift in Sources */,
+				4CE650381E84BE1F0026143C /* RebuttalModule.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
 				4C4A8C2A1E94009000C972F5 /* CommentManager.swift in Sources */,
 				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
 				4C8681131E8EE79800776829 /* PlayButton.swift in Sources */,
 				4C1906561E7B3E4E003DDCC5 /* Source.swift in Sources */,
 				4C269B251E897AA0007B9DFE /* RebuttalTableViewCell.swift in Sources */,
-				4CA31BC81E94A69E00EF4D0E /* RebutDetailCard.swift in Sources */,
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,

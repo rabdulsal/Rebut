@@ -8,15 +8,25 @@
 
 import Foundation
 import UIKit
+import FDWaveformView
 
 class RebutDetailCell : UITableViewCell {
-    @IBOutlet weak var rebutDetailView: RebutDetailCard!
-    var rebutPlayerDelegate: RebutPlayerDelegate?
     
-    override func awakeFromNib() {
-        self.rebutDetailView = Bundle.main.loadNibNamed("RebutDetailCard", owner: self, options: nil)?.first as! RebutDetailCard
-        
-        // TODO: Set rebutDetailView.playerDelegate = self
+    // Definitely needed
+    @IBOutlet weak var waveFormView: FDWaveformView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var postTitleLabel: UILabel!
+    @IBOutlet weak var upvoteButton: UIButton!
+    @IBOutlet weak var downvoteButton: UIButton!
+    @IBOutlet weak var totalUpvotesLabel: UILabel!
+    @IBOutlet weak var totalDownvotesLabel: UILabel!
+    var rebutPlayerDelegate: RebutPlayerDelegate?
+    var rebut: Rebut!
+    
+    func configureCell(with rebut: Rebut, delegate: RebutPlayerDelegate) {
+        rebutPlayerDelegate = delegate
+        waveFormView.audioURL = URL(fileURLWithPath: rebut.recordingFilePath)
+        waveFormView.progressSamples = waveFormView.totalSamples / 2
     }
 }
 

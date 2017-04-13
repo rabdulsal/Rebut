@@ -16,6 +16,7 @@ class RebutFeedViewController: UIViewController {
     @IBOutlet weak var rebuttalFeedTableView: UITableView!
     
     let reuseIdentifier = "RebuttalCell"
+    let detailVCIdentifier = "RebutDetailVC"
     var rebutModule = RebuttalModule.shared
 
     override func viewDidLoad() {
@@ -29,11 +30,23 @@ class RebutFeedViewController: UIViewController {
         super.viewWillAppear(animated)
         rebuttalFeedTableView.reloadData()
     }
+    
+    // MARK: - IBActions
+    
+    @IBAction func pressedPushToDetailButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: detailVCIdentifier) as! RebutDetailViewController
+        detailVC.rebut = rebutModule.currentlyVisibleRebut!
+//        present(detailVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
 extension RebutFeedViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Push to DetailVC
+        // Do nothing
+        
     }
 }
 

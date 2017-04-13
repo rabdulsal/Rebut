@@ -1,5 +1,5 @@
 //
-//  RebuttalDetailViewController.swift
+//  RebutDetailViewController.swift
 //  Rebut
 //
 //  Created by Rashad Abdul-Salaam on 3/26/17.
@@ -18,13 +18,15 @@ class RebutDetailViewController : UIViewController {
      * 3. TableView will have multiple sections for RebutDetailView & Comments, etc
     */
     
-    // Needs UIView which will load RebutDetailCard xib
     @IBOutlet weak var tableView: UITableView!
     
     var rebuttalViewModel: RebuttalViewModel?
     var rebuttal: Rebuttal! // TODO: Will be fetched from previous VC
     var rebutPlayerManager: RebutDetailPlayerManager!
-    let identifier = "rebutViewCell"
+    let rebutCellIdentifier = "rebutViewCell"
+    let module = RebuttalModule.shared
+    var rebut: Rebut!
+    
     let realm = try! Realm()
     
     override func viewDidLoad() {
@@ -33,6 +35,8 @@ class RebutDetailViewController : UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        // Register any Cell Nibs
+        tableView.register(UINib.init(nibName: "RebutDetailCard", bundle: nil), forCellReuseIdentifier: rebutCellIdentifier)
         // Load RebutDetailCard xib into UIView property
         // Get Rebuttle from Realm.
         // Once retrieved set RebuttleViewModel
@@ -47,9 +51,12 @@ extension RebutDetailViewController : UITableViewDelegate {
 extension RebutDetailViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! RebutDetailCell
-        cell.rebutPlayerDelegate = self
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: rebutCellIdentifier, for: indexPath) as! RebutDetailCell
+            cell.configureCell(with: self.rebut, delegate: self)
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,8 +64,7 @@ extension RebutDetailViewController : UITableViewDataSource {
         switch section {
     
         case 1: // Comments
-            let userComment = rebuttal?.userComments[section]
-            return userComment?.comments.count ?? 0
+            return self.rebut.allComments.count
         default:
             return 1
         }
@@ -74,6 +80,10 @@ extension RebutDetailViewController : UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2 // RebutDetailView + Comments
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? 300 : 50
+    }
 }
 
 // MARK: - Delegate Extensions
@@ -84,4 +94,3 @@ extension RebutDetailViewController : RebutPlayerDelegate {
         tableView.reloadData()
     }
 }
-// Will be reloading tableView at rebutDidFinishPlaying

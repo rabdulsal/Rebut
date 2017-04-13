@@ -26,7 +26,11 @@ class RebuttalTableViewCell : UITableViewCell {
     var autoPlayDelegate: RebutAutoPlayDelegate?
     var playerDelegate: RebutPlayerDelegate?
     var waveFormCellDelegate: RebutViewModelDelegate?
-    var currentVisibleIndexPath: IndexPath?
+    var currentVisibleIndexPath: IndexPath? {
+        didSet {
+            module.currentlyVisibleRebut = module.allRebuts[self.currentVisibleIndexPath!.row]
+        }
+    }
     
     override func awakeFromNib() {
         rebuttalCollectionView.delegate = self
@@ -67,6 +71,7 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
         let rebut = rebuts[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! RebuttalWaveFormCell
         cell.configureCell(with: rebut, delegate: self)
+        module.currentlyVisibleRebut = rebut
         module.player = RebutPlayer(url: URL(fileURLWithPath: (rebut.recordingFilePath)))
         return cell
     }

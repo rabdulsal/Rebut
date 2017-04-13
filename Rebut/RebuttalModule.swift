@@ -29,6 +29,7 @@ class RebuttalModule {
         }
     }
     var rebutToPlay: Rebut?
+    var currentlyVisibleRebut: Rebut?
     var playerDelegate: RebutPlayerDelegate?
     // Realm stuff
     let realm = try! Realm()
