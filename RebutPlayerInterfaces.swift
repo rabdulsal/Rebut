@@ -15,17 +15,33 @@ import Foundation
 
 protocol RebutPlayable {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate)
-    func rebutIsPlaying() -> Bool // Not needed? Causes crash
     func shouldStopPlayingRebut()
-    func shouldRespondToRebut(rebut: Rebut)
+}
+
+protocol PlayButtonTogglable {
+    var playButton: PlayButton { get }
+}
+
+extension PlayButtonTogglable {
+    func togglePlayButtonSelected() {
+        playButton.isSelected = !playButton.isSelected
+    }
 }
 
 // Notifies the delegate it should take voting
 
-protocol RebutDetailPlayable : RebutPlayable {
+protocol RebutVotable {
     func shouldUpVoteRebut(rebut: Rebut)
     func shouldDownVoteRebut(rebut: Rebut)
 }
+
+protocol RebutRespondable {
+    func shouldReplyToRebut(rebut: Rebut)
+    func shouldCommentOnRebut(rebut: Rebut)
+}
+
+protocol RebuttalFeedResponder : RebutPlayable, RebutRespondable { }
+protocol RebutDetailResponder : RebutVotable, RebutRespondable { }
 
 /*
  * Notifies delegate when RebutPlay has finished playing

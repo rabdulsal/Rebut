@@ -13,7 +13,7 @@ import FDWaveformView
 class RebuttalWaveFormCell : UICollectionViewCell {
     
     @IBOutlet weak var waveformView: FDWaveformView!
-    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var button: PlayButton!
     @IBOutlet weak var userName: UILabel! // Put userName in upper left corner
     @IBOutlet weak var respondButton: UIButton! // Pressing triggers Response creation
     @IBOutlet weak var likeButton: UIButton! // Pressing increment Likes
@@ -29,10 +29,6 @@ class RebuttalWaveFormCell : UICollectionViewCell {
             viewModelDelegate?.shouldPlayRebut(rebut: self.rebut!, playDelegate: self)
         }
         togglePlayButtonSelected()
-    }
-    
-    @IBAction func pressedRespond(_ sender: Any) {
-        viewModelDelegate?.shouldRespondToRebut(rebut: self.rebut!)
     }
     
     @IBAction func pressedLike(_ sender: Any) {
@@ -70,6 +66,10 @@ extension RebuttalWaveFormCell : RebutAutoPlayDelegate {
     }
 }
 
+extension RebuttalWaveFormCell : PlayButtonTogglable {
+    var playButton: PlayButton { return self.button }
+}
+
 private extension RebuttalWaveFormCell {
     func playButtonOn() {
         //playButton.setTitle("Stop", for: .normal) // Eventually move to RebutPlayButton class
@@ -80,9 +80,5 @@ private extension RebuttalWaveFormCell {
         //playButton.setTitle("Play", for: .normal) // Eventually move to RebutPlayButton class
         togglePlayButtonSelected()
 
-    }
-    
-    func togglePlayButtonSelected() {
-        playButton.isSelected = !playButton.isSelected
     }
 }

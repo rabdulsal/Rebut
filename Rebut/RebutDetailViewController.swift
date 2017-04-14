@@ -100,18 +100,18 @@ extension RebutDetailViewController : RebutPlayerDelegate {
     }
 }
 
-extension RebutDetailViewController : RebutDetailPlayable {
+extension RebutDetailViewController : RebutPlayable {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
         //
     }
     
-    func rebutIsPlaying() -> Bool {
-        return false
-    }
-    
     func shouldStopPlayingRebut() {
         //
-    }
+    }   
+    
+}
+
+extension RebutDetailViewController : RebutDetailResponder {
     
     func shouldUpVoteRebut(rebut: Rebut) {
         //
@@ -121,7 +121,11 @@ extension RebutDetailViewController : RebutDetailPlayable {
         //
     }
     
-    func shouldRespondToRebut(rebut: Rebut) {
-        //
+    func shouldReplyToRebut(rebut: Rebut) {
+        
+    }
+    
+    func shouldCommentOnRebut(rebut: Rebut) {
+        
     }
 }

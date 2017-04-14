@@ -60,7 +60,7 @@ private extension RebutPlayer {
     }
     
     func startAudioTracking() {
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true) // Must figure out how to invalidate timer @ Stop
     }
     
     @objc func updateAudioProgressView() {

@@ -20,19 +20,22 @@ class RebutDetailCell : UITableViewCell {
     @IBOutlet weak var downvoteButton: UIButton!
     @IBOutlet weak var totalUpvotesLabel: UILabel!
     @IBOutlet weak var totalDownvotesLabel: UILabel!
+    @IBOutlet weak var button: PlayButton!
     
-    
-    var rebutPlayerDelegate: RebutPlayerDelegate?
+    var rebutPlayerDelegate: RebutPlayable?
     var rebut: Rebut!
     
-    func configureCell(with rebut: Rebut, delegate: RebutPlayerDelegate) {
+    func configureCell(with rebut: Rebut, delegate: RebutPlayable) {
+        self.rebut = rebut
         rebutPlayerDelegate = delegate
         userNameLabel.text = rebut.poster?.name
         waveFormView.audioURL = URL(fileURLWithPath: rebut.recordingFilePath)
-        waveFormView.progressSamples = waveFormView.totalSamples / 2
     }
     
     // MARK: - IBActions
+    @IBAction func pressedPlay(_ sender: Any) {
+        rebutPlayerDelegate?.shouldPlayRebut(rebut: self.rebut!, playDelegate: self)
+    }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
         print("Pressed Like Button")
@@ -57,14 +60,18 @@ class RebutDetailCell : UITableViewCell {
 }
 
 // MARK: - Delegate Extensions
+extension RebutDetailCell : PlayButtonTogglable {
+    var playButton: PlayButton { return self.button }
+}
 
 extension RebutDetailCell : RebutPlayerDelegate {
     
     func trackCurrentProgress(progress: Double) {
         // Update WaveFormView
+        waveFormView.progressSamples = Int(progress)
     }
     
     func didFinishPlayingRebut(rebut: Rebut) {
-        rebutPlayerDelegate?.didFinishPlayingRebut(rebut: rebut)
+        togglePlayButtonSelected()
     }
 }

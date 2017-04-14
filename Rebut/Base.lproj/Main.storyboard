@@ -147,7 +147,7 @@
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </view>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShP-Je-dhl" userLabel="PushToDetail Button">
-                                                                        <rect key="frame" x="-0.5" y="-0.5" width="329" height="123"/>
+                                                                        <rect key="frame" x="51" y="0.0" width="227" height="123"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <connections>
                                                                             <action selector="pressedPushToDetailButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CYq-Vg-nxR"/>
@@ -176,15 +176,15 @@
                                                                 <constraint firstItem="ShP-Je-dhl" firstAttribute="centerX" secondItem="raY-1t-psX" secondAttribute="centerX" id="1oN-zP-aLP"/>
                                                                 <constraint firstItem="apw-ee-8cY" firstAttribute="centerY" secondItem="raY-1t-psX" secondAttribute="centerY" id="8Pg-hf-N43"/>
                                                                 <constraint firstAttribute="bottomMargin" secondItem="raY-1t-psX" secondAttribute="bottom" constant="-8" id="919-4E-ZqB"/>
-                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="width" secondItem="raY-1t-psX" secondAttribute="width" id="EBq-0q-hrj"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="raY-1t-psX" secondAttribute="trailing" constant="-8" id="ROg-Ud-t7H"/>
                                                                 <constraint firstItem="apw-ee-8cY" firstAttribute="centerX" secondItem="raY-1t-psX" secondAttribute="centerX" id="djG-7m-0Kb"/>
+                                                                <constraint firstItem="ShP-Je-dhl" firstAttribute="width" secondItem="RNG-yw-WdR" secondAttribute="height" multiplier="227:123" id="gkd-72-V3v"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="leading" secondItem="RNG-yw-WdR" secondAttribute="leadingMargin" constant="-8" id="mYb-Jv-Umb"/>
                                                                 <constraint firstItem="ShP-Je-dhl" firstAttribute="centerY" secondItem="raY-1t-psX" secondAttribute="centerY" id="uEu-iS-xow"/>
                                                                 <constraint firstItem="raY-1t-psX" firstAttribute="top" secondItem="RNG-yw-WdR" secondAttribute="topMargin" constant="-8" id="w4p-BA-U6O"/>
                                                             </constraints>
                                                             <connections>
-                                                                <outlet property="playButton" destination="apw-ee-8cY" id="tTk-au-chJ"/>
+                                                                <outlet property="button" destination="apw-ee-8cY" id="8E0-CD-AB8"/>
                                                                 <outlet property="waveformView" destination="raY-1t-psX" id="E0W-17-aVc"/>
                                                             </connections>
                                                         </collectionViewCell>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="359"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="358.4707646176912"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
