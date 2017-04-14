@@ -25,7 +25,7 @@ class RebuttalTableViewCell : UITableViewCell {
     let identifier = "waveformCell"
     var autoPlayDelegate: RebutAutoPlayDelegate?
     var playerDelegate: RebutPlayerDelegate?
-    var waveFormCellDelegate: RebutViewModelDelegate?
+    var waveFormCellDelegate: RebutPlayable?
     var currentVisibleIndexPath: IndexPath? {
         didSet {
             module.currentlyVisibleRebut = module.allRebuts[self.currentVisibleIndexPath!.row]
@@ -77,7 +77,7 @@ extension RebuttalTableViewCell : UICollectionViewDataSource {
     }
 }
 
-extension RebuttalTableViewCell : RebutViewModelDelegate {
+extension RebuttalTableViewCell : RebutPlayable {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
         self.playerDelegate = playDelegate
         module.playerDelegate = self
@@ -102,6 +102,11 @@ extension RebuttalTableViewCell : RebutViewModelDelegate {
 }
 
 extension RebuttalTableViewCell : RebutPlayerDelegate {
+    
+    func trackCurrentProgress(progress: Double) {
+        playerDelegate?.trackCurrentProgress(progress: progress)
+    }
+    
     func didFinishPlayingRebut(rebut: Rebut) {
         // Fire playerDelegate
 //

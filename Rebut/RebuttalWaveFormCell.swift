@@ -10,14 +10,6 @@ import Foundation
 import UIKit
 import FDWaveformView
 
-protocol RebutViewModelDelegate {
-    func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate)
-    func rebutIsPlaying() -> Bool
-    func shouldStopPlayingRebut()
-    func shouldRespondToRebut(rebut: Rebut)
-    func shouldLikeRebut(rebut: Rebut)
-}
-
 class RebuttalWaveFormCell : UICollectionViewCell {
     
     @IBOutlet weak var waveformView: FDWaveformView!
@@ -27,7 +19,7 @@ class RebuttalWaveFormCell : UICollectionViewCell {
     @IBOutlet weak var likeButton: UIButton! // Pressing increment Likes
     
     var rebut: Rebut?
-    var viewModelDelegate: RebutViewModelDelegate?
+    var viewModelDelegate: RebutPlayable?
     
     // IBActions
     @IBAction func pressedPlay(_ sender: Any) {
@@ -44,7 +36,7 @@ class RebuttalWaveFormCell : UICollectionViewCell {
     }
     
     @IBAction func pressedLike(_ sender: Any) {
-        viewModelDelegate?.shouldLikeRebut(rebut: self.rebut!)
+        
     }
     
     @IBAction func pressedRebutCell(_ sender: Any) {
@@ -52,15 +44,20 @@ class RebuttalWaveFormCell : UICollectionViewCell {
     }
     
     
-    func configureCell(with rebut: Rebut, delegate: RebutViewModelDelegate) {
+    func configureCell(with rebut: Rebut, delegate: RebutPlayable) {
         self.rebut = rebut
         self.viewModelDelegate = delegate
         waveformView.audioURL = URL(fileURLWithPath: rebut.recordingFilePath)
-        waveformView.progressSamples = waveformView.totalSamples / 2
     }
 }
 
 extension RebuttalWaveFormCell : RebutPlayerDelegate {
+    
+    func trackCurrentProgress(progress: Double) {
+        // Shade WaveFormView
+        waveformView.progressSamples = Int(progress)
+    }
+    
     func didFinishPlayingRebut(rebut: Rebut) {
         togglePlayButtonSelected()
 //        viewModelDelegate?.shouldStopPlayingRebut() Don't need to call this?

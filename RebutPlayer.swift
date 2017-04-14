@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 import AVFoundation
 
-protocol RebutPlayerDelegate {
-    func didFinishPlayingRebut(rebut: Rebut)
-}
-
 class RebutPlayer : NSObject {
     
     // --- Manages playing Rebuts, Rebuttles and auto-play through responses
@@ -23,7 +19,6 @@ class RebutPlayer : NSObject {
             player.delegate = self
         }
     }
-    
     var currentRebutPlaying: Rebut?
     var playerDelegate: RebutPlayerDelegate?
     
@@ -54,6 +49,7 @@ private extension RebutPlayer {
             player.prepareToPlay()
             player.volume = 1.0
             player.play()
+            startAudioTracking()
         } catch let error as NSError {
             //self.player = nil
             print(error.localizedDescription)
@@ -61,6 +57,14 @@ private extension RebutPlayer {
             print("AVAudioPlayer init failed")
         }
         
+    }
+    
+    func startAudioTracking() {
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateAudioProgressView), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateAudioProgressView() {
+        playerDelegate?.trackCurrentProgress(progress:player.currentTime)
     }
 }
 

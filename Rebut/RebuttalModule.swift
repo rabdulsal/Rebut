@@ -1,4 +1,4 @@
-//
+////
 //  RebuttalModule.swift
 //  Rebut
 //
@@ -103,6 +103,10 @@ class RebuttalModule {
 }
 
 extension RebuttalModule : RebutPlayerDelegate {
+    func trackCurrentProgress(progress: Double) {
+        playerDelegate?.trackCurrentProgress(progress: progress)
+    }
+
     func didFinishPlayingRebut(rebut: Rebut) {
         playerDelegate?.didFinishPlayingRebut(rebut: rebut)
         // Include logic to recursively check if Rebut has a response, and continue auto-playing all responses until done

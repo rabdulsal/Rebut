@@ -24,6 +24,7 @@
 		4CA31BC61E94866800EF4D0E /* RebutDetailCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CA31BC51E94866800EF4D0E /* RebutDetailCard.xib */; };
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */; };
+		4CAB72371E9F235800E0DFC2 /* RebutPlayerInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
 		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
@@ -100,6 +101,7 @@
 		4CA3AF411E7F516C006BE3F0 /* Rebut-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rebut-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttalViewModel.swift; path = Rebut/RebuttalViewModel.swift; sourceTree = "<group>"; };
+		4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayerInterfaces.swift; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */,
 				4C6054C71E8D5B800006514E /* RebutPlayer.swift */,
 				4C4A8C291E94009000C972F5 /* CommentManager.swift */,
+				4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */,
 			);
 			name = Helpers;
 			path = ..;
@@ -671,6 +674,7 @@
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
 				4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */,
 				4C6054C81E8D5B800006514E /* RebutPlayer.swift in Sources */,
+				4CAB72371E9F235800E0DFC2 /* RebutPlayerInterfaces.swift in Sources */,
 				4CA31BC11E8CAF7800EF4D0E /* RebuttalWaveFormCell.swift in Sources */,
 				4CE650461E86E5F50026143C /* Object+Extension.swift in Sources */,
 				4CBC609A1E7B8436005C26D4 /* Recording.swift in Sources */,

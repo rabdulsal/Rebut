@@ -89,8 +89,39 @@ extension RebutDetailViewController : UITableViewDataSource {
 // MARK: - Delegate Extensions
 
 extension RebutDetailViewController : RebutPlayerDelegate {
+    
+    func trackCurrentProgress(progress: Double) {
+        // Do nothing?
+    }
+    
     func didFinishPlayingRebut(rebut: Rebut) {
         // Set new Rebut Datasource w/ RebutDetailPlayerManager
         tableView.reloadData()
+    }
+}
+
+extension RebutDetailViewController : RebutDetailPlayable {
+    func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
+        //
+    }
+    
+    func rebutIsPlaying() -> Bool {
+        return false
+    }
+    
+    func shouldStopPlayingRebut() {
+        //
+    }
+    
+    func shouldUpVoteRebut(rebut: Rebut) {
+        //
+    }
+    
+    func shouldDownVoteRebut(rebut: Rebut) {
+        //
+    }
+    
+    func shouldRespondToRebut(rebut: Rebut) {
+        //
     }
 }

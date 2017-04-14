@@ -38,6 +38,16 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xb-v7-er0" userLabel="Comment View">
                                         <rect key="frame" x="234" y="8" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRj-gJ-bz3">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Comment"/>
+                                                <connections>
+                                                    <action selector="commentButtonPressed:" destination="Wrs-OE-ZAl" eventType="touchUpInside" id="xXe-kB-g7M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="lW1-gH-mnA"/>
@@ -46,6 +56,16 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruX-Ky-xsh" userLabel="Reply View">
                                         <rect key="frame" x="282" y="8" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxE-NS-GDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Reply"/>
+                                                <connections>
+                                                    <action selector="replyButtonPressed:" destination="Wrs-OE-ZAl" eventType="touchUpInside" id="qUs-za-uHz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="V39-CB-WNr"/>
@@ -54,9 +74,22 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xd-qn-2n2" userLabel="Likes View">
                                         <rect key="frame" x="186" y="8" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJr-Ip-BXA">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <state key="normal" title="Likes"/>
+                                                <connections>
+                                                    <action selector="likeButtonPressed:" destination="Wrs-OE-ZAl" eventType="touchUpInside" id="JIH-6w-U8O"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="dJr-Ip-BXA" firstAttribute="centerY" secondItem="5Xd-qn-2n2" secondAttribute="centerY" id="9Iy-6A-sLA"/>
+                                            <constraint firstItem="dJr-Ip-BXA" firstAttribute="width" secondItem="5Xd-qn-2n2" secondAttribute="width" id="Css-TX-n8b"/>
                                             <constraint firstAttribute="height" constant="40" id="EAz-SK-Zz7"/>
+                                            <constraint firstItem="dJr-Ip-BXA" firstAttribute="centerX" secondItem="5Xd-qn-2n2" secondAttribute="centerX" id="Hhv-IO-dpa"/>
+                                            <constraint firstItem="dJr-Ip-BXA" firstAttribute="height" secondItem="5Xd-qn-2n2" secondAttribute="height" id="Pur-QZ-gOG"/>
                                             <constraint firstAttribute="width" constant="40" id="tgF-YU-WCY"/>
                                         </constraints>
                                     </view>
@@ -100,7 +133,9 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3A-BE-uqz" userLabel="Upvote Button">
                                                 <rect key="frame" x="-0.5" y="0.0" width="83" height="50"/>
-                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="pressedUpVoteButton:" destination="Wrs-OE-ZAl" eventType="touchUpInside" id="eHv-vu-zbY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,7 +164,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2f-BO-JtA" userLabel="Downvote Button">
                                                 <rect key="frame" x="-0.5" y="0.0" width="83" height="50"/>
-                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="pressedDownVoteButton:" destination="Wrs-OE-ZAl" eventType="touchUpInside" id="lPs-cg-bEj"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SnN-7c-ddu">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
