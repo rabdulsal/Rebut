@@ -154,5 +154,24 @@ extension RebutDetailViewController : RebutDetailResponder {
     
     func shouldCommentOnRebut(rebut: Rebut) {
         // Show CreateCommentViewController
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let commentVC = storyboard.instantiateViewController(withIdentifier: "CreateCommentViewController") as! CreateCommentViewController
+        commentVC.rebut = rebut
+        commentVC.commentDelegate = self
+        present(commentVC, animated: true, completion: nil)
+        toggleTabBar()
+    }
+}
+
+extension RebutDetailViewController : CommentSubmittable {
+    func didSubmitComment(comment: Comment) {
+        // Update Comment & Reload tableView
+        toggleTabBar()
+        self.rebut.allComments.append(comment)
+        tableView.reloadData()
+    }
+    
+    func didCancelComment() {
+        toggleTabBar()
     }
 }

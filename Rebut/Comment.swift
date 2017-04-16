@@ -30,4 +30,11 @@ class Comment : Object {
 //        self.recipient = recipient
 //        self.parentRebut = rebut
 //    }
+    
+    func makeComment(comment: String, commenter: User, recipient: User, rebut: Rebut) {
+        self.comment = comment
+        self.commenter = commenter
+        self.recipient = recipient
+        self.parentRebut = rebut
+    }
 }

@@ -34,16 +34,6 @@ class RecordControlsViewController : UIViewController {
         recordingsTableView.delegate = self
         recordingsTableView.dataSource = self
         recordingWaveForm.delegate = self
-        
-        // Make RecorderView
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        recorderView = storyboard.instantiateViewController(withIdentifier: "RecorderViewController") as! RebutRecordViewController
-        recorderView.delegate = self
-        recorderView.createRecorder()
-        //recorderView.view.backgroundColor = UIColor.green
-        recorderView.modalTransitionStyle = .crossDissolve
-        recorderView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        
     }
     
     @IBAction func start() {

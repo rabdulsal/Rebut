@@ -27,6 +27,7 @@
 		4CAB72371E9F235800E0DFC2 /* RebutPlayerInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */; };
 		4CAB72391EA1B8D700E0DFC2 /* RecordingControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB72381EA1B8D700E0DFC2 /* RecordingControllerFactory.swift */; };
 		4CAB723B1EA2B24F00E0DFC2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB723A1EA2B24F00E0DFC2 /* UIViewController+Extension.swift */; };
+		4CAB723D1EA3115000E0DFC2 /* CreateCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB723C1EA3115000E0DFC2 /* CreateCommentViewController.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
 		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
@@ -106,6 +107,7 @@
 		4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayerInterfaces.swift; sourceTree = "<group>"; };
 		4CAB72381EA1B8D700E0DFC2 /* RecordingControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingControllerFactory.swift; sourceTree = "<group>"; };
 		4CAB723A1EA2B24F00E0DFC2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4CAB723C1EA3115000E0DFC2 /* CreateCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCommentViewController.swift; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */,
 				4CE650471E88B5B40026143C /* RebutDetailViewController.swift */,
+				4CAB723C1EA3115000E0DFC2 /* CreateCommentViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */,
 				4CA31BC31E9334CB00EF4D0E /* PostViewController.swift in Sources */,
 				4CE650381E84BE1F0026143C /* RebuttalModule.swift in Sources */,
+				4CAB723D1EA3115000E0DFC2 /* CreateCommentViewController.swift in Sources */,
 				4C1906521E7B241B003DDCC5 /* User.swift in Sources */,
 				4C4A8C2A1E94009000C972F5 /* CommentManager.swift in Sources */,
 				4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */,
