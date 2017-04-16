@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import IQAudioRecorderController
 
 class RebutDetailViewController : UIViewController {
     
@@ -26,12 +27,15 @@ class RebutDetailViewController : UIViewController {
     let rebutCellIdentifier = "rebutViewCell"
     let module = RebuttalModule.shared
     var rebut: Rebut!
+    var playerDelegate: RebutPlayerDelegate?
+    var recorderFactory: RecordingControllerFactory?
     
-    let realm = try! Realm()
+//    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        recorderFactory = RecordingControllerFactory(viewController: self)
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -88,30 +92,53 @@ extension RebutDetailViewController : UITableViewDataSource {
 
 // MARK: - Delegate Extensions
 
+extension RebutDetailViewController : IQAudioRecorderViewControllerDelegate {
+    func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
+        self.toggleTabBar()
+        // Initialize Rebut
+        // Set Rebut as currentRebut's response
+        // Mock User
+        let user = User(value: ["name": "Johnny", "karma": 10])
+        // New Rebut
+        let newRebut = Rebut()
+        newRebut.makeRebut(with: filePath, poster: user)
+        rebut.allReplies.append(newRebut)
+        module.updateAllRebuts(with: filePath)
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
+        controller.dismiss(animated: true, completion: nil)
+        // Move to extension on UIViewController
+        self.toggleTabBar()
+    }
+}
+
 extension RebutDetailViewController : RebutPlayerDelegate {
     
     func trackCurrentProgress(progress: Double) {
         // Do nothing?
+        playerDelegate?.trackCurrentProgress(progress: progress)
     }
     
     func didFinishPlayingRebut(rebut: Rebut) {
         // Set new Rebut Datasource w/ RebutDetailPlayerManager
+        playerDelegate?.didFinishPlayingRebut(rebut: rebut)
+        // Setup next Rebut to display
         tableView.reloadData()
     }
 }
 
-extension RebutDetailViewController : RebutPlayable {
+extension RebutDetailViewController : RebutDetailResponder {
     func shouldPlayRebut(rebut: Rebut, playDelegate: RebutPlayerDelegate) {
-        //
+        self.playerDelegate = playDelegate
+        module.playerDelegate = self
+        module.play(rebut: rebut)
     }
     
     func shouldStopPlayingRebut() {
-        //
-    }   
-    
-}
-
-extension RebutDetailViewController : RebutDetailResponder {
+        module.player?.stop()
+    }
     
     func shouldUpVoteRebut(rebut: Rebut) {
         //
@@ -122,10 +149,10 @@ extension RebutDetailViewController : RebutDetailResponder {
     }
     
     func shouldReplyToRebut(rebut: Rebut) {
-        
+        recorderFactory?.presentRecorder()
     }
     
     func shouldCommentOnRebut(rebut: Rebut) {
-        
+        // Show CreateCommentViewController
     }
 }

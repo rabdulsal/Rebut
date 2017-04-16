@@ -25,10 +25,12 @@ class RecordControlsViewController : UIViewController {
     }
     var recorderView: RebutRecordViewController!
     var rebutModule = RebuttalModule.shared
+    var recorderFactory: RecordingControllerFactory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        recorderFactory = RecordingControllerFactory(viewController: self)
         recordingsTableView.delegate = self
         recordingsTableView.dataSource = self
         recordingWaveForm.delegate = self
@@ -45,15 +47,7 @@ class RecordControlsViewController : UIViewController {
     }
     
     @IBAction func start() {
-        let controller = IQAudioRecorderViewController()
-        controller.delegate = self
-        controller.title = "Recorder"
-        controller.maximumRecordDuration = 10
-        controller.allowCropping = false
-        //    controller.barStyle = UIBarStyleDefault;
-        //    controller.normalTintColor = [UIColor magentaColor];
-        //    controller.highlightedTintColor = [UIColor orangeColor];
-        self.presentBlurredAudioRecorderViewControllerAnimated(controller)
+        recorderFactory?.presentRecorder()
     }
     
     @IBAction func play() {
@@ -107,6 +101,7 @@ extension RecordControlsViewController : UITableViewDataSource {
 extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
     func audioRecorderController(_ controller: IQAudioRecorderViewController, didFinishWithAudioAtPath filePath: String) {
         //allRebuts.insert(filePath, at: 0)
+        self.toggleTabBar()
         print(filePath)
         rebutModule.updateAllRebuts(with: filePath)
         controller.dismiss(animated: true) { 
@@ -117,7 +112,7 @@ extension RecordControlsViewController : IQAudioRecorderViewControllerDelegate {
     }
     
     func audioRecorderControllerDidCancel(_ controller: IQAudioRecorderViewController) {
-        
+        self.toggleTabBar()
         controller.dismiss(animated: true, completion: nil)
     }
 }

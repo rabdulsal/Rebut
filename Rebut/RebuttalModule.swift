@@ -32,12 +32,12 @@ class RebuttalModule {
     var currentlyVisibleRebut: Rebut?
     var playerDelegate: RebutPlayerDelegate?
     // Realm stuff
-    let realm = try! Realm()
-    var allRealmRebuts: Results<Rebut> {
-        get {
-            return realm.objects(Rebut.self)
-        }
-    }
+//    let realm = try! Realm()
+//    var allRealmRebuts: Results<Rebut> {
+//        get {
+//            return realm.objects(Rebut.self)
+//        }
+//    }
     /*
     init(post:Post?=nil, responses:[Rebut]=[Rebut](), rebuts:[Rebut]=[Rebut]()) {
         self.post = post
@@ -100,6 +100,14 @@ class RebuttalModule {
         }
         return nil
     }
+    
+    func upVoteRebut(rebut: Rebut) {
+        getRebut(rebut: rebut)?.upVotes+=1
+    }
+    
+    func downVoteRebut(rebut: Rebut) {
+        getRebut(rebut: rebut)?.dnVotes+=1
+    }
 }
 
 extension RebuttalModule : RebutPlayerDelegate {
@@ -116,5 +124,12 @@ extension RebuttalModule : RebutPlayerDelegate {
 private extension RebuttalModule {
     func togglePlayer() {
         (player?.isPlaying())! ? player?.stop() : player?.play(rebut: self.rebutToPlay!)
+    }
+    
+    func getRebut(rebut: Rebut) -> Rebut? {
+        if let rebuts = rebuttal?.allRebuts {
+            return rebuts.filter { $0 == rebut }.first
+        }
+        return nil
     }
 }

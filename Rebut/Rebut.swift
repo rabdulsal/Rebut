@@ -20,6 +20,8 @@ class Rebut : Object {
     dynamic var recordingData: NSData = NSData()
     dynamic var poster: User?
     dynamic var likes: Int = 0
+//    var upVotes: Int = 0
+//    var dnVotes: Int = 0
     let responses = List<Response>()
     let comments = List<Comment>()
     let sources = List<Source>()
@@ -29,9 +31,12 @@ class Rebut : Object {
     var recording: Recording?
     var rebutType: RebutType = .rebut
     var allComments = [Comment]()
+    var allReplies = [Rebut]()
+    var upVotes = 0
+    var dnVotes = 0
     
     override static func ignoredProperties() -> [String] {
-        return ["recording","waveFormView","rebutType","allComments"]
+        return ["recording","waveFormView","rebutType","allComments","upvotes","dnVotes","allReplies"]
     }
     
     func makeDataWithPath(filePath: String) {
@@ -47,11 +52,13 @@ class Rebut : Object {
         
     }
     
-    func makeRebut(with recordingFile: String, poster: User, rebutType: RebutType = .rebut, responses: [Response]?=nil, likes: Int=0) {
+    func makeRebut(with recordingFile: String, poster: User, rebutType: RebutType = .rebut, responses: [Response]?=nil, likes: Int=0, upVotes: Int=0, dnVotes: Int=0) {
         //self.makeDataWithPath(filePath: recordingFile)
         self.poster = poster
         self.recordingFilePath = recordingFile
         self.rebutType = rebutType
+//        self.upVotes = upVotes
+//        self.dnVotes = dnVotes
         //self.writeToRealm(object: self)
         do {
             try realm?.write {

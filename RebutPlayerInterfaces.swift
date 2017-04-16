@@ -41,7 +41,7 @@ protocol RebutRespondable {
 }
 
 protocol RebuttalFeedResponder : RebutPlayable, RebutRespondable { }
-protocol RebutDetailResponder : RebutVotable, RebutRespondable { }
+protocol RebutDetailResponder : RebutPlayable, RebutVotable, RebutRespondable { }
 
 /*
  * Notifies delegate when RebutPlay has finished playing

@@ -25,6 +25,8 @@
 		4CA3AF5A1E80E4F8006BE3F0 /* Rebuttal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */; };
 		4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */; };
 		4CAB72371E9F235800E0DFC2 /* RebutPlayerInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */; };
+		4CAB72391EA1B8D700E0DFC2 /* RecordingControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB72381EA1B8D700E0DFC2 /* RecordingControllerFactory.swift */; };
+		4CAB723B1EA2B24F00E0DFC2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB723A1EA2B24F00E0DFC2 /* UIViewController+Extension.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
 		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
@@ -102,6 +104,8 @@
 		4CA3AF591E80E4F8006BE3F0 /* Rebuttal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rebuttal.swift; sourceTree = "<group>"; };
 		4CA3AF5B1E82133B006BE3F0 /* RebuttalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RebuttalViewModel.swift; path = Rebut/RebuttalViewModel.swift; sourceTree = "<group>"; };
 		4CAB72361E9F235800E0DFC2 /* RebutPlayerInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RebutPlayerInterfaces.swift; sourceTree = "<group>"; };
+		4CAB72381EA1B8D700E0DFC2 /* RecordingControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingControllerFactory.swift; sourceTree = "<group>"; };
+		4CAB723A1EA2B24F00E0DFC2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				4CE650451E86E5F50026143C /* Object+Extension.swift */,
+				4CAB723A1EA2B24F00E0DFC2 /* UIViewController+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				4CBC608C1E7A43DB005C26D4 /* Response.swift */,
 				4CBC608E1E7A4D5C005C26D4 /* Comment.swift */,
 				4CBC60991E7B8436005C26D4 /* Recording.swift */,
+				4CAB72381EA1B8D700E0DFC2 /* RecordingControllerFactory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -669,6 +675,7 @@
 				4CBC60891E7A4188005C26D4 /* Rebut.swift in Sources */,
 				4CE650481E88B5B40026143C /* RebutDetailViewController.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
+				4CAB723B1EA2B24F00E0DFC2 /* UIViewController+Extension.swift in Sources */,
 				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
 				4C04CF2E1E9C8E350033FF5B /* RebutDetailCell.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
@@ -695,6 +702,7 @@
 				4CBC609C1E7B84A6005C26D4 /* RebutRecordView.swift in Sources */,
 				4CBC608D1E7A43DB005C26D4 /* Response.swift in Sources */,
 				4CCE14601E7E4BCA00CAFCA1 /* RecordingTableViewCell.swift in Sources */,
+				4CAB72391EA1B8D700E0DFC2 /* RecordingControllerFactory.swift in Sources */,
 				4C8681151E8F003A00776829 /* CustomColors.swift in Sources */,
 				4CBC608B1E7A42C3005C26D4 /* Post.swift in Sources */,
 			);

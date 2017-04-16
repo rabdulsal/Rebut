@@ -22,40 +22,46 @@ class RebutDetailCell : UITableViewCell {
     @IBOutlet weak var totalDownvotesLabel: UILabel!
     @IBOutlet weak var button: PlayButton!
     
-    var rebutPlayerDelegate: RebutPlayable?
+    var rebutResponderDelegate: RebutDetailResponder?
     var rebut: Rebut!
     
-    func configureCell(with rebut: Rebut, delegate: RebutPlayable) {
+    func configureCell(with rebut: Rebut, delegate: RebutDetailResponder) {
         self.rebut = rebut
-        rebutPlayerDelegate = delegate
+        rebutResponderDelegate = delegate
         userNameLabel.text = rebut.poster?.name
         waveFormView.audioURL = URL(fileURLWithPath: rebut.recordingFilePath)
+        self.totalUpvotesLabel.text = "\(self.rebut.upVotes)"
+        self.totalDownvotesLabel.text = "\(self.rebut.dnVotes)"
     }
     
     // MARK: - IBActions
     @IBAction func pressedPlay(_ sender: Any) {
-        rebutPlayerDelegate?.shouldPlayRebut(rebut: self.rebut!, playDelegate: self)
+        rebutResponderDelegate?.shouldPlayRebut(rebut: self.rebut!, playDelegate: self)
     }
     
     @IBAction func likeButtonPressed(_ sender: Any) {
-        print("Pressed Like Button")
+        
     }
     
     @IBAction func commentButtonPressed(_ sender: Any) {
-        print("Pressed Comment Button")
+        // Present Comment entry view
+        rebutResponderDelegate?.shouldCommentOnRebut(rebut: self.rebut)
     }
     
     @IBAction func replyButtonPressed(_ sender: Any) {
-        print("Pressed Reply Button")
+        // Launch RecordVC
+        rebutResponderDelegate?.shouldReplyToRebut(rebut: self.rebut)
     }
     
     
     @IBAction func pressedUpVoteButton(_ sender: Any) {
-        print("Pressed UpVote Button")
+        self.rebut.upVotes+=1
+        self.totalUpvotesLabel.text = "\(self.rebut.upVotes)"
     }
     
     @IBAction func pressedDownVoteButton(_ sender: Any) {
-        print("Pressed DownVote Button")
+        self.rebut.dnVotes+=1
+        self.totalDownvotesLabel.text = "\(self.rebut.dnVotes)"
     }
 }
 
