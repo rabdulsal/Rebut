@@ -25,6 +25,7 @@ class RebutDetailViewController : UIViewController {
     var rebuttal: Rebuttal! // TODO: Will be fetched from previous VC
     var rebutPlayerManager: RebutDetailPlayerManager!
     let rebutCellIdentifier = "rebutViewCell"
+    let commentCellIdentifier = "CommentCell"
     let module = RebuttalModule.shared
     var rebut: Rebut!
     var playerDelegate: RebutPlayerDelegate?
@@ -41,6 +42,7 @@ class RebutDetailViewController : UIViewController {
         
         // Register any Cell Nibs
         tableView.register(UINib.init(nibName: "RebutDetailCard", bundle: nil), forCellReuseIdentifier: rebutCellIdentifier)
+        tableView.estimatedRowHeight = 72
         // Load RebutDetailCard xib into UIView property
         // Get Rebuttle from Realm.
         // Once retrieved set RebuttleViewModel
@@ -59,8 +61,12 @@ extension RebutDetailViewController : UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: rebutCellIdentifier, for: indexPath) as! RebutDetailCell
             cell.configureCell(with: self.rebut, delegate: self)
             return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: commentCellIdentifier, for: indexPath) as! CommentCell
+            let comment = rebut.allComments[indexPath.row]
+            cell.configureCell(username: comment.commenter!.name, comment: comment.comment)
+            return cell
         }
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,7 +92,7 @@ extension RebutDetailViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 300 : 50
+        return indexPath.section == 0 ? 300 : UITableViewAutomaticDimension
     }
 }
 

@@ -212,6 +212,14 @@
                                             <outlet property="titleLabel" destination="nfa-kU-tV8" id="gfv-CJ-x0s"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CLl-34-TFU">
+                                        <rect key="frame" x="0.0" y="180" width="343" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CLl-34-TFU" id="Hmc-bM-JRJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="151.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -269,13 +277,42 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="241" id="8Ky-vF-Bcy" userLabel="CommentsViewCell">
-                                        <rect key="frame" x="0.0" y="258" width="375" height="241"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="72" id="8Ky-vF-Bcy" userLabel="CommentsViewCell" customClass="CommentCell" customModule="Rebut" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="258" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ky-vF-Bcy" id="mID-ee-Ma3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbF-Yo-p1T">
+                                                    <rect key="frame" x="8" y="16" width="58" height="14.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14.5" id="7Fy-1g-9sN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOs-aA-21d">
+                                                    <rect key="frame" x="8" y="38.5" width="359" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QOs-aA-21d" firstAttribute="top" secondItem="UbF-Yo-p1T" secondAttribute="bottom" constant="8" id="H34-Ry-Si7"/>
+                                                <constraint firstItem="QOs-aA-21d" firstAttribute="leading" secondItem="mID-ee-Ma3" secondAttribute="leadingMargin" id="Vhf-OW-HEd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QOs-aA-21d" secondAttribute="trailing" id="ZPG-RD-DZd"/>
+                                                <constraint firstItem="UbF-Yo-p1T" firstAttribute="leading" secondItem="mID-ee-Ma3" secondAttribute="leadingMargin" id="kE5-7N-cew"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QOs-aA-21d" secondAttribute="bottom" constant="8" id="mF4-3J-wzO"/>
+                                                <constraint firstItem="UbF-Yo-p1T" firstAttribute="top" secondItem="mID-ee-Ma3" secondAttribute="topMargin" constant="8" id="wC7-xB-58x"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="comment" destination="QOs-aA-21d" id="CK2-Oz-HOk"/>
+                                            <outlet property="username" destination="UbF-Yo-p1T" id="rOK-0v-kG8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -22,8 +22,8 @@ class CreateCommentViewController : UIViewController {
     var commentDelegate: CommentSubmittable?
     
     override func viewDidLoad() {
-        //
-        submitButton.isEnabled = commentIsValid()
+        commentTextView.delegate = self
+        checkValidComment()
     }
     
     @IBAction func pressedSubmitButton(_ sender: Any) {
@@ -48,9 +48,20 @@ class CreateCommentViewController : UIViewController {
     
 }
 
+extension CreateCommentViewController : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        if submitButton.isEnabled == false {
+            checkValidComment()
+        }
+    }
+}
+
 private extension CreateCommentViewController {
     func commentIsValid() -> Bool {
-        
         return commentTextView.text.isEmpty == false
+    }
+    
+    func checkValidComment() {
+        submitButton.isEnabled = commentIsValid()
     }
 }
