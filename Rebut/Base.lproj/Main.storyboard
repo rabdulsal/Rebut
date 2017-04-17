@@ -42,58 +42,51 @@
                                     <action selector="start" destination="9pv-A4-QxB" eventType="touchUpInside" id="poe-4x-Ccn"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YU2-0E-emp">
-                                <rect key="frame" x="16" y="390" width="343" height="228"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DPH-1y-9cr">
+                                <rect key="frame" x="16" y="367" width="343" height="173"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordControlsIdentifier" id="pvL-55-7Ox" customClass="RecordingTableViewCell" customModule="Rebut" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pvL-55-7Ox" id="RpX-7g-STp">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-PJ-afr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="EJr-PJ-afr" firstAttribute="top" secondItem="RpX-7g-STp" secondAttribute="topMargin" constant="-8" id="6c2-bg-zL9"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="EJr-PJ-afr" secondAttribute="trailing" constant="-8" id="Gli-DG-hpc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="EJr-PJ-afr" secondAttribute="bottom" constant="-8" id="JCT-eD-Etg"/>
-                                                <constraint firstItem="EJr-PJ-afr" firstAttribute="leading" secondItem="RpX-7g-STp" secondAttribute="leadingMargin" constant="-8" id="RNY-fv-ziq"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="title" destination="EJr-PJ-afr" id="2xo-ff-WnC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYk-tH-Hu1" userLabel="Post Btn">
+                                <rect key="frame" x="0.0" y="548" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.52941176469999995" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="X5V-Jr-Xxg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedPostButton:" destination="lnq-fK-Ibv" eventType="touchUpInside" id="SCi-70-PNh"/>
+                                    <action selector="start" destination="Ekp-LJ-mfL" eventType="touchUpInside" id="VXl-x4-gsA"/>
+                                    <action selector="start" destination="lnq-fK-Ibv" eventType="touchUpInside" id="dPa-Ds-hjn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="YU2-0E-emp" secondAttribute="bottom" id="1i7-tZ-XhK"/>
+                            <constraint firstItem="DPH-1y-9cr" firstAttribute="top" secondItem="ch8-Nd-o0i" secondAttribute="bottom" constant="8" id="0ce-RF-JmY"/>
+                            <constraint firstItem="HYk-tH-Hu1" firstAttribute="top" secondItem="DPH-1y-9cr" secondAttribute="bottom" constant="8" id="7GI-fM-oEx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SPB-BG-jPJ" secondAttribute="trailing" id="9B0-X8-zJQ"/>
+                            <constraint firstItem="HYk-tH-Hu1" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="BdS-Jj-b7s"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="HYk-tH-Hu1" secondAttribute="bottom" id="CZS-XN-7th"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ch8-Nd-o0i" secondAttribute="trailing" id="FId-dW-2ho"/>
                             <constraint firstItem="ch8-Nd-o0i" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Gb2-24-trg"/>
-                            <constraint firstItem="YU2-0E-emp" firstAttribute="top" secondItem="ch8-Nd-o0i" secondAttribute="bottom" constant="31" id="SRm-6S-Mdp"/>
-                            <constraint firstItem="YU2-0E-emp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="UJ5-AV-1b9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DPH-1y-9cr" secondAttribute="leading" id="OMW-89-Q2b"/>
+                            <constraint firstItem="HYk-tH-Hu1" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="TuT-hH-6Nw"/>
                             <constraint firstItem="SPB-BG-jPJ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="VZu-YC-Z5T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HYk-tH-Hu1" secondAttribute="trailing" constant="-16" id="WP7-dj-T8b"/>
                             <constraint firstItem="ch8-Nd-o0i" firstAttribute="top" secondItem="SPB-BG-jPJ" secondAttribute="bottom" constant="8" id="gJG-uP-VIR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YU2-0E-emp" secondAttribute="trailing" id="hEM-A9-2UM"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="YU2-0E-emp" secondAttribute="leading" id="kxf-eR-1jm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ch8-Nd-o0i" secondAttribute="leading" id="qXf-jm-w5i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPH-1y-9cr" secondAttribute="trailing" id="z9e-e7-87J"/>
                             <constraint firstAttribute="leadingMargin" secondItem="SPB-BG-jPJ" secondAttribute="leading" id="zWA-vI-61k"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="recordingWaveForm" destination="SPB-BG-jPJ" id="LPd-QU-KT3"/>
-                        <outlet property="recordingsTableView" destination="YU2-0E-emp" id="XkD-km-QjI"/>
                         <outlet property="startBtn" destination="ch8-Nd-o0i" id="nSc-3Z-ujZ"/>
                     </connections>
                 </viewController>
