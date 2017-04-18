@@ -10,10 +10,12 @@ import Foundation
 import RealmSwift
 import FDWaveformView
 
+enum RebutType {
+    case post, rebut
+}
+
 class Rebut : Object {
-    enum RebutType {
-        case post, rebut
-    }
+    
     // Represents a base content object consisting of Audio
     
 //    private (set) var recording: Recording TODO: Must store Recording as NSData object

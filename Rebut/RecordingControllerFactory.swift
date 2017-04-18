@@ -25,6 +25,8 @@ class RecordingControllerFactory {
         controller.title = "Recorder"
         controller.maximumRecordDuration = 10
         controller.allowCropping = false
+        controller.modalPresentationStyle = .custom
+        controller.transitioningDelegate = self.parentViewController as? UIViewControllerTransitioningDelegate
         //    controller.barStyle = UIBarStyleDefault;
         //    controller.normalTintColor = [UIColor magentaColor];
         //    controller.highlightedTintColor = [UIColor orangeColor];
