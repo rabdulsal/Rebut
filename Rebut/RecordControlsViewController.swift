@@ -26,6 +26,7 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var waveformViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     var interfaceType: RebutType = .post
     var rebutModule = RebuttalModule.shared
     var recorderFactory: RecordingControllerFactory?
@@ -43,6 +44,7 @@ class RecordControlsViewController : UIViewController {
         sourceField.delegate = self
         titleField.delegate = self
         waveformViewHeight.constant = self.view.bounds.height/2
+        closeButton.isHidden = true
         
         // InterfaceType diffs
         self.setUIForInterfaceType()
@@ -68,6 +70,9 @@ class RecordControlsViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func pressedCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 // MARK: - IQAudioRecorderViewControllerDelegate
@@ -112,7 +117,8 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Button title = "Post"
             postButton.setTitle("Post", for: .normal)
             // Hide Cancel button
-            closeButton.isHidden = true
+            cancelButton.isEnabled = false
+            cancelButton.tintColor = UIColor.clear
             // Set postButton actionHandler
             actionHandler = postActionHandler
             break
@@ -122,7 +128,8 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Button title = "Reply"
             postButton.setTitle("Reply", for: .normal)
             // Show Cancel button
-            closeButton.isHidden = false
+            cancelButton.isEnabled = true
+            cancelButton.tintColor = UIColor.rebutCTAColor()
             // Set actionHandler
             actionHandler = replyActionHandler
             break

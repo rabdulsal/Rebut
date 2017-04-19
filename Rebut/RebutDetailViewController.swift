@@ -155,10 +155,13 @@ extension RebutDetailViewController : RebutDetailResponder {
     
     func shouldReplyToRebut(rebut: Rebut) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
         let recordControlsViewController = storyboard.instantiateViewController(withIdentifier: "RecordControlsViewController") as! RecordControlsViewController
+        let navController = UINavigationController(rootViewController: recordControlsViewController)
         recordControlsViewController.interfaceType = .rebut
+        
 //        let navController = UINavigationController(rootViewController: self)
-        self.navigationController?.present(recordControlsViewController, animated: true, completion: nil)
+        self.navigationController?.present(navController, animated: true, completion: nil)
 //        self.present(recordControlsViewController, animated: false, completion: nil)
 //        recorderFactory?.presentRecorder()
     }
