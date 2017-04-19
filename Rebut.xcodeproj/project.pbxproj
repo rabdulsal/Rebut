@@ -31,7 +31,7 @@
 		4CAB723F1EA3AEDD00E0DFC2 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB723E1EA3AEDD00E0DFC2 /* CommentCell.swift */; };
 		4CBC60581E7A2D42005C26D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */; };
 		4CBC605A1E7A2D42005C26D4 /* RebutFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */; };
-		4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */; };
+		4CBC605C1E7A2D42005C26D4 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC605B1E7A2D42005C26D4 /* RecordViewController.swift */; };
 		4CBC605F1E7A2D42005C26D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC605D1E7A2D42005C26D4 /* Main.storyboard */; };
 		4CBC60611E7A2D42005C26D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC60601E7A2D42005C26D4 /* Assets.xcassets */; };
 		4CBC60641E7A2D42005C26D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC60621E7A2D42005C26D4 /* LaunchScreen.storyboard */; };
@@ -113,7 +113,7 @@
 		4CBC60541E7A2D41005C26D4 /* Rebut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rebut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBC60571E7A2D42005C26D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CBC60591E7A2D42005C26D4 /* RebutFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutFeedViewController.swift; sourceTree = "<group>"; };
-		4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebutRecordViewController.swift; sourceTree = "<group>"; };
+		4CBC605B1E7A2D42005C26D4 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4CBC605E1E7A2D42005C26D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CBC60601E7A2D42005C26D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CBC60631E7A2D42005C26D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		4CA3AF401E7F0D2B006BE3F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4CBC605B1E7A2D42005C26D4 /* RebutRecordViewController.swift */,
+				4CBC605B1E7A2D42005C26D4 /* RecordViewController.swift */,
 				4CBC609D1E7B8B16005C26D4 /* RecordControlsViewController.swift */,
 				4CA31BC21E9334CB00EF4D0E /* PostViewController.swift */,
 			);
@@ -682,7 +682,7 @@
 				4CE650481E88B5B40026143C /* RebutDetailViewController.swift in Sources */,
 				4C1906541E7B246E003DDCC5 /* Commenter.swift in Sources */,
 				4CAB723B1EA2B24F00E0DFC2 /* UIViewController+Extension.swift in Sources */,
-				4CBC605C1E7A2D42005C26D4 /* RebutRecordViewController.swift in Sources */,
+				4CBC605C1E7A2D42005C26D4 /* RecordViewController.swift in Sources */,
 				4C04CF2E1E9C8E350033FF5B /* RebutDetailCell.swift in Sources */,
 				4CCE145C1E7E19A300CAFCA1 /* Value.swift in Sources */,
 				4CA3AF5C1E82133B006BE3F0 /* RebuttalViewModel.swift in Sources */,

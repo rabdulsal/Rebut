@@ -24,6 +24,7 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var sourceField: UITextView!
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var waveformViewHeight: NSLayoutConstraint!
     
     var interfaceType: RebutType = .post
     var rebutModule = RebuttalModule.shared
@@ -41,7 +42,7 @@ class RecordControlsViewController : UIViewController {
         sourceField.layer.borderColor = UIColor.gray.cgColor
         sourceField.delegate = self
         titleField.delegate = self
-        titleView.isHidden = true
+        waveformViewHeight.constant = self.view.bounds.height/2
         
         // InterfaceType diffs
         self.setUIForInterfaceType()
@@ -109,9 +110,9 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Show titleView
             titleView.isHidden = false
             // Button title = "Post"
-            postButton.titleLabel?.text = "Post"
+            postButton.setTitle("Post", for: .normal)
             // Hide Cancel button
-            closeButton.isHidden = false
+            closeButton.isHidden = true
             // Set postButton actionHandler
             actionHandler = postActionHandler
             break
@@ -119,9 +120,9 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Hide titleView
             titleView.isHidden = true
             // Button title = "Reply"
-            postButton.titleLabel?.text = "Reply"
+            postButton.setTitle("Reply", for: .normal)
             // Show Cancel button
-            closeButton.isHidden = true
+            closeButton.isHidden = false
             // Set actionHandler
             actionHandler = replyActionHandler
             break
@@ -130,10 +131,12 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
     
     func postActionHandler() {
         // Make Post
+        print("This is a POST")
     }
     
     func replyActionHandler() {
         // Make Rebut
+        print("This is a REPLY")
     }
     
     func resetUI() {

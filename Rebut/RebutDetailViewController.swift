@@ -30,13 +30,12 @@ class RebutDetailViewController : UIViewController {
     var rebut: Rebut!
     var playerDelegate: RebutPlayerDelegate?
     var recorderFactory: RecordingControllerFactory?
+//    var recordControlsViewController: RecordControlsViewController? = nil
     
 //    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        recorderFactory = RecordingControllerFactory(viewController: self)
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -155,7 +154,13 @@ extension RebutDetailViewController : RebutDetailResponder {
     }
     
     func shouldReplyToRebut(rebut: Rebut) {
-        recorderFactory?.presentRecorder()
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let recordControlsViewController = storyboard.instantiateViewController(withIdentifier: "RecordControlsViewController") as! RecordControlsViewController
+        recordControlsViewController.interfaceType = .rebut
+//        let navController = UINavigationController(rootViewController: self)
+        self.navigationController?.present(recordControlsViewController, animated: true, completion: nil)
+//        self.present(recordControlsViewController, animated: false, completion: nil)
+//        recorderFactory?.presentRecorder()
     }
     
     func shouldCommentOnRebut(rebut: Rebut) {
