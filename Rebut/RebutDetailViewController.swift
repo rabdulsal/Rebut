@@ -29,8 +29,6 @@ class RebutDetailViewController : UIViewController {
     let module = RebuttalModule.shared
     var rebut: Rebut!
     var playerDelegate: RebutPlayerDelegate?
-    var recorderFactory: RecordingControllerFactory?
-//    var recordControlsViewController: RecordControlsViewController? = nil
     
 //    let realm = try! Realm()
     
@@ -159,11 +157,7 @@ extension RebutDetailViewController : RebutDetailResponder {
         let recordControlsViewController = storyboard.instantiateViewController(withIdentifier: "RecordControlsViewController") as! RecordControlsViewController
         let navController = UINavigationController(rootViewController: recordControlsViewController)
         recordControlsViewController.interfaceType = .rebut
-        
-//        let navController = UINavigationController(rootViewController: self)
         self.navigationController?.present(navController, animated: true, completion: nil)
-//        self.present(recordControlsViewController, animated: false, completion: nil)
-//        recorderFactory?.presentRecorder()
     }
     
     func shouldCommentOnRebut(rebut: Rebut) {
@@ -172,7 +166,8 @@ extension RebutDetailViewController : RebutDetailResponder {
         let commentVC = storyboard.instantiateViewController(withIdentifier: "CreateCommentViewController") as! CreateCommentViewController
         commentVC.rebut = rebut
         commentVC.commentDelegate = self
-        present(commentVC, animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: commentVC)
+        self.navigationController?.present(navController, animated: true, completion: nil)
         toggleTabBar()
     }
 }

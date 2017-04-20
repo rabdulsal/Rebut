@@ -23,7 +23,6 @@ class RecordControlsViewController : UIViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var sourceField: UITextView!
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var waveformViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -44,7 +43,6 @@ class RecordControlsViewController : UIViewController {
         sourceField.delegate = self
         titleField.delegate = self
         waveformViewHeight.constant = self.view.bounds.height/2
-        closeButton.isHidden = true
         
         // InterfaceType diffs
         self.setUIForInterfaceType()
@@ -64,10 +62,6 @@ class RecordControlsViewController : UIViewController {
     
     @IBAction func pressedPost() {
         actionHandler?()
-    }
-    
-    @IBAction func pressedClose(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func pressedCancel(_ sender: Any) {
@@ -107,7 +101,7 @@ extension RecordControlsViewController : UITextViewDelegate {
 
 extension RecordControlsViewController: FDWaveformViewDelegate { }
 
-private extension RecordControlsViewController { // TODO: Eventually place in ViewModel
+private extension RecordControlsViewController { 
     
     func setUIForInterfaceType() {
         switch interfaceType {
@@ -119,6 +113,7 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Hide Cancel button
             cancelButton.isEnabled = false
             cancelButton.tintColor = UIColor.clear
+            self.navigationItem.title = "Post"
             // Set postButton actionHandler
             actionHandler = postActionHandler
             break
@@ -130,6 +125,7 @@ private extension RecordControlsViewController { // TODO: Eventually place in Vi
             // Show Cancel button
             cancelButton.isEnabled = true
             cancelButton.tintColor = UIColor.rebutCTAColor()
+            self.navigationItem.title = "Reply"
             // Set actionHandler
             actionHandler = replyActionHandler
             break

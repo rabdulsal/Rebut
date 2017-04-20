@@ -40,7 +40,7 @@ class CreateCommentViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func pressedCancelButton(_ sender: Any) {
+    @IBAction func pressedCancel(_ sender: Any) {
         commentDelegate?.didCancelComment()
         self.dismiss(animated: true, completion: nil)
     }

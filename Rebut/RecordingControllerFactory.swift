@@ -14,16 +14,9 @@ protocol RecordingViewControllerDelegate : IQAudioRecorderViewControllerDelegate
 class RecordingControllerFactory {
     
     var parentViewController: UIViewController
-    var recordControlsViewController: RecordControlsViewController? = nil
     
     init(viewController: UIViewController) {
         self.parentViewController = viewController
-        makeRecordControlsViewController()
-    }
-    
-    func makeRecordControlsViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        recordControlsViewController = storyboard.instantiateViewController(withIdentifier: "RecordControlsViewController") as! RecordControlsViewController
     }
     
     func presentRecorder() {

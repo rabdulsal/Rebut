@@ -147,10 +147,6 @@ fileprivate extension RebuttalTableViewCell {
     func autoScroll() {
         let nextIndex = (rebuttalCollectionView.indexPathsForVisibleItems.first?.row)! + 1
         if nextRebutExists(nextIndex: nextIndex) {
-//            self.rebuttalCollectionView.setContentOffset(CGPoint(x:CGFloat(Int(self.rebuttalCollectionView.frame.width)*nextIndex),y:0), animated: true)
-//            UIView.animate(withDuration: 0.4, animations: {
-//                self.rebuttalCollectionView.contentOffset = CGPoint(x:CGFloat(Int(self.rebuttalCollectionView.frame.width)*nextIndex),y:0)
-//            })
             let indexPath = IndexPath(row: nextIndex, section: 0)
             rebuttalCollectionView.scrollToItem(at: indexPath, at: .right, animated: true)
             currentVisibleIndexPath = indexPath

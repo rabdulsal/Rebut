@@ -28,9 +28,7 @@ class RecordViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ShowRecordControlsViewController") {
-//            let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-//            let recordControlsVC = storyboard.instantiateViewController(withIdentifier: "RecordControlsViewController") as! RecordControlsViewController
-//            recordControlsViewController = segue.destination as! RecordControlsViewController
+            
         }
     }
     

@@ -295,13 +295,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEz-84-jqA">
-                                <rect key="frame" x="16" y="110" width="80" height="21"/>
+                                <rect key="frame" x="16" y="74" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-8H-XyO">
-                                <rect key="frame" x="16" y="139" width="343" height="45"/>
+                                <rect key="frame" x="16" y="103" width="343" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Yf1-Pe-RGC"/>
@@ -310,7 +310,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haM-b0-hkf">
-                                <rect key="frame" x="16" y="192" width="343" height="45"/>
+                                <rect key="frame" x="16" y="156" width="343" height="45"/>
                                 <color key="backgroundColor" red="0.52941176469999995" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,35 +319,29 @@
                                     <action selector="pressedSubmitButton:" destination="Wvx-w4-d0i" eventType="touchUpInside" id="wgK-KP-7XZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqb-hQ-tsl">
-                                <rect key="frame" x="16" y="64" width="30" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="X">
-                                    <color key="titleColor" red="0.52941176469999995" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressedCancelButton:" destination="Wvx-w4-d0i" eventType="touchUpInside" id="33P-fK-0y8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="haM-b0-hkf" firstAttribute="width" secondItem="bgp-8H-XyO" secondAttribute="width" id="CkC-HW-C7L"/>
                             <constraint firstItem="bgp-8H-XyO" firstAttribute="top" secondItem="GEz-84-jqA" secondAttribute="bottom" constant="8" id="EzB-7U-hwl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bgp-8H-XyO" secondAttribute="leading" id="MUX-Cy-OPV"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Kqb-hQ-tsl" secondAttribute="leading" id="NfI-v0-n6j"/>
                             <constraint firstItem="haM-b0-hkf" firstAttribute="height" secondItem="bgp-8H-XyO" secondAttribute="height" id="RUS-R0-Laq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bgp-8H-XyO" secondAttribute="trailing" id="bnl-O9-5e8"/>
-                            <constraint firstItem="GEz-84-jqA" firstAttribute="top" secondItem="Kqb-hQ-tsl" secondAttribute="bottom" constant="10" id="cW5-oz-1bj"/>
                             <constraint firstItem="haM-b0-hkf" firstAttribute="centerX" secondItem="bgp-8H-XyO" secondAttribute="centerX" id="gJi-au-2Sa"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GEz-84-jqA" secondAttribute="leading" id="h72-tG-Kgp"/>
                             <constraint firstItem="haM-b0-hkf" firstAttribute="top" secondItem="bgp-8H-XyO" secondAttribute="bottom" constant="8" id="kmf-ij-yMv"/>
-                            <constraint firstItem="Kqb-hQ-tsl" firstAttribute="top" secondItem="Dsv-8D-MCc" secondAttribute="bottom" id="kpU-Op-F91"/>
+                            <constraint firstItem="GEz-84-jqA" firstAttribute="top" secondItem="Dsv-8D-MCc" secondAttribute="bottom" constant="10" id="nPc-XD-k4u"/>
                             <constraint firstItem="bgp-8H-XyO" firstAttribute="centerX" secondItem="qdO-NR-fyE" secondAttribute="centerX" id="qeY-nB-rmM"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="YfF-Tu-e6G"/>
+                    <navigationItem key="navigationItem" id="YfF-Tu-e6G">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JFf-t1-u38">
+                            <connections>
+                                <action selector="pressedCancel:" destination="Wvx-w4-d0i" id="k9W-qc-6BX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentTextView" destination="bgp-8H-XyO" id="A0w-qb-f6B"/>
@@ -543,14 +537,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfW-dL-rpc">
-                                <rect key="frame" x="24" y="84" width="30" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="X"/>
-                                <connections>
-                                    <action selector="pressedClose:" destination="gLn-ER-l0k" eventType="touchUpInside" id="ykU-JX-7Gx"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -565,12 +551,10 @@
                             <constraint firstItem="Ph0-9h-r8G" firstAttribute="top" secondItem="LPa-yF-opk" secondAttribute="bottom" constant="8" id="Nwa-G8-7Qm"/>
                             <constraint firstItem="yra-Mx-4HP" firstAttribute="centerY" secondItem="UAe-kb-mAg" secondAttribute="centerY" id="Odw-F0-0Qf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yra-Mx-4HP" secondAttribute="trailing" id="Phe-od-RId"/>
-                            <constraint firstItem="rfW-dL-rpc" firstAttribute="leading" secondItem="Q1R-bu-0uL" secondAttribute="leadingMargin" constant="8" id="Qmm-vg-P31"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nHB-EV-o7G" secondAttribute="leading" id="Qzl-7f-ffW"/>
                             <constraint firstItem="nHB-EV-o7G" firstAttribute="top" secondItem="up1-oA-ukQ" secondAttribute="bottom" constant="8" id="YYE-HF-kfx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qgJ-Kw-xuh" secondAttribute="leading" id="cDF-iY-tUr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qgJ-Kw-xuh" secondAttribute="trailing" id="jmI-sd-8Ve"/>
-                            <constraint firstItem="rfW-dL-rpc" firstAttribute="top" secondItem="up1-oA-ukQ" secondAttribute="bottom" constant="20" id="mY3-21-N7h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nHB-EV-o7G" secondAttribute="trailing" id="qpa-hH-3Cy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bVi-Ep-6Ii" secondAttribute="leading" constant="-8" id="rDh-pH-cEZ"/>
                             <constraint firstItem="LPa-yF-opk" firstAttribute="top" secondItem="UAe-kb-mAg" secondAttribute="bottom" constant="10" id="s5Q-ak-0ea"/>
@@ -588,7 +572,6 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="cancelButton" destination="MwP-J2-UkZ" id="Jfq-oJ-CXU"/>
-                        <outlet property="closeButton" destination="rfW-dL-rpc" id="yMa-DN-Ar1"/>
                         <outlet property="postButton" destination="yra-Mx-4HP" id="d2g-dZ-bFk"/>
                         <outlet property="recordButton" destination="UAe-kb-mAg" id="P8C-Vc-B3x"/>
                         <outlet property="recordingWaveForm" destination="nHB-EV-o7G" id="CgS-7F-DDI"/>
