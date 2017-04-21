@@ -35,11 +35,11 @@ class RecordControlsViewController : UIViewController {
         super.viewDidLoad()
         
         recorderFactory = RecordingControllerFactory(viewController: self)
-        recordingWaveForm.layer.borderWidth = 2
-        recordingWaveForm.layer.borderColor = UIColor.gray.cgColor
+        recordingWaveForm.layer.borderWidth = 1
+        recordingWaveForm.layer.borderColor = UIColor.lightGray.cgColor
         recordingWaveForm.delegate = self
-        sourceField.layer.borderWidth = 2
-        sourceField.layer.borderColor = UIColor.gray.cgColor
+        sourceField.layer.borderWidth = 1
+        sourceField.layer.borderColor = UIColor.lightGray.cgColor
         sourceField.delegate = self
         titleField.delegate = self
         waveformViewHeight.constant = self.view.bounds.height/2
